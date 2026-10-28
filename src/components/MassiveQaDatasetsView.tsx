@@ -6,6 +6,9 @@ import {
   QaStreamProgress,
   OFFLINE_EE_PHYSICS_DATASET,
   OFFLINE_CODING_DATASET,
+  OFFLINE_OPENASSISTANT_DATASET,
+  OFFLINE_SCIENCE_STEM_DATASET,
+  OFFLINE_PHILOSOPHY_MIND_DATASET,
 } from '../data/qaDatasetCatalog';
 import { wasmCrossbarEngine, CrossbarTelemetry } from '../physics/wasmMemristorEngine';
 
@@ -122,6 +125,12 @@ export const MassiveQaDatasetsView: React.FC<MassiveQaDatasetsViewProps> = ({
       // Fallback to local offline datasets
       if (datasetId === 'ee_physics') {
         pairsToIngest = OFFLINE_EE_PHYSICS_DATASET.slice(offset % OFFLINE_EE_PHYSICS_DATASET.length, (offset % OFFLINE_EE_PHYSICS_DATASET.length) + limit);
+      } else if (datasetId === 'openassistant') {
+        pairsToIngest = OFFLINE_OPENASSISTANT_DATASET.slice(offset % OFFLINE_OPENASSISTANT_DATASET.length, (offset % OFFLINE_OPENASSISTANT_DATASET.length) + limit);
+      } else if (datasetId === 'science_stem') {
+        pairsToIngest = OFFLINE_SCIENCE_STEM_DATASET.slice(offset % OFFLINE_SCIENCE_STEM_DATASET.length, (offset % OFFLINE_SCIENCE_STEM_DATASET.length) + limit);
+      } else if (datasetId === 'philosophy_mind') {
+        pairsToIngest = OFFLINE_PHILOSOPHY_MIND_DATASET.slice(offset % OFFLINE_PHILOSOPHY_MIND_DATASET.length, (offset % OFFLINE_PHILOSOPHY_MIND_DATASET.length) + limit);
       } else if (['codealpaca', 'humaneval_algorithms', 'typescript_web', 'embedded_c', 'sql_database', 'code_debugging'].includes(datasetId)) {
         pairsToIngest = OFFLINE_CODING_DATASET.slice(offset % OFFLINE_CODING_DATASET.length, (offset % OFFLINE_CODING_DATASET.length) + limit);
       }

@@ -2492,6 +2492,24 @@ export class WasmMemristorEngine {
       this.recalibrateThermodynamics();
     }
 
+    // Dynamic Self-Healing Identity Guard: ensure birthday and age crystal is loaded even if restored from stale cache
+    const hasAgeIdentity = this.molecules.some((m) =>
+      m.focalText && m.focalText.includes('created in October 2026 as a physical neuromorphic memristor computer')
+    );
+    if (!hasAgeIdentity) {
+      const idDoc = CORPORE_DOCUMENTS.find((d) => d.title.includes('Instruction-Tuned Conversational Dialogue'));
+      if (idDoc) {
+        const idMols = this.extractNarrativeMolecules(idDoc.content, idDoc.title, idDoc.author);
+        for (const dm of idMols) {
+          this.crystallizeMoleculeH8DelayLines(dm, 2, 0.18, 16);
+        }
+        this.molecules = [
+          ...idMols,
+          ...this.molecules.filter((m) => m.docTitle !== idDoc.title),
+        ];
+      }
+    }
+
     let bestMolecule: CrossbarNarrativeMolecule | null = null;
     let bestScore = -1;
     let bestWavePackets: CharWavePacket[] = [];
@@ -2615,8 +2633,10 @@ export class WasmMemristorEngine {
             }
           }
 
-          if (hasCausalMatch || prevOverlapCount >= 2) {
-            preScore += (this.isRightHemisphereMolecule(m) ? 1800 : 240) + prevOverlapCount * 90;
+          if (hasCausalMatch) {
+            preScore += (this.isRightHemisphereMolecule(m) ? 8500 : 2500) + prevOverlapCount * 120;
+          } else if (prevOverlapCount >= 2) {
+            preScore += (this.isRightHemisphereMolecule(m) ? 1400 : 200) + prevOverlapCount * 60;
           }
         }
 

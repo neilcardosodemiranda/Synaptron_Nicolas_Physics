@@ -230,10 +230,13 @@ export const BareMetalCrossbarConsole: React.FC<BareMetalCrossbarConsoleProps> =
           const hasInstructionTunedKnowledge = wasmCrossbarEngine.molecules.some((m) =>
             m.docTitle && m.docTitle.includes('Instruction-Tuned')
           );
-          if (!hasFoundationalTimeMachine || !hasRightHemisphereKnowledge || !hasInstructionTunedKnowledge) {
+          const hasAgeIdentity = wasmCrossbarEngine.molecules.some((m) =>
+            m.focalText && m.focalText.includes('created in October 2026 as a physical neuromorphic memristor computer')
+          );
+          if (!hasFoundationalTimeMachine || !hasRightHemisphereKnowledge || !hasInstructionTunedKnowledge || !hasAgeIdentity) {
             for (const doc of CORPORE_DOCUMENTS) {
               const alreadyHas = wasmCrossbarEngine.molecules.some((m) => m.docTitle === doc.title);
-              if (!alreadyHas) {
+              if (!alreadyHas || (!hasAgeIdentity && doc.title.includes('Instruction-Tuned'))) {
                 wasmCrossbarEngine.ingestText(doc.content, doc.title, 2, 0.15, doc.author);
               }
             }

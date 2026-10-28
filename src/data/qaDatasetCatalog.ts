@@ -491,3 +491,145 @@ export const OFFLINE_CODING_DATASET: QaPair[] = [
   },
 ];
 
+export const OFFLINE_OPENASSISTANT_DATASET: QaPair[] = [
+  {
+    id: 'oasst_1',
+    question: 'How can I maintain focus when studying difficult and abstract topics?',
+    answer: 'Break your study sessions into 25-minute intervals using the Pomodoro technique, eliminate notification distractions, and alternate deep reading with active recall by explaining the concepts aloud in your own words.',
+    category: 'Study Habits & Focus',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_2',
+    question: 'What is an effective way to apologize when you have made an honest mistake?',
+    answer: 'A sincere apology directly acknowledges the specific error without defensive excuses, takes personal responsibility, expresses genuine regret for the impact caused, and proposes a clear corrective action to make amends.',
+    category: 'Interpersonal Communication',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_3',
+    question: 'Can you explain the concept of emotional intelligence and why it matters in leadership?',
+    answer: 'Emotional intelligence comprises self-awareness, emotional self-regulation, empathy, and social skill. In leadership, it enables mentors to understand their team emotional drivers, resolve conflicts calmly, and inspire genuine trust.',
+    category: 'Psychology & Leadership',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_4',
+    question: 'How can someone develop better active listening habits during conversations?',
+    answer: 'Give your conversation partner undivided attention without planning your reply while they speak, summarize back key points to ensure alignment, validate their emotional experience, and ask open-ended clarifying questions.',
+    category: 'Conversational Fluency',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_5',
+    question: 'What is the distinction between intrinsic and extrinsic motivation?',
+    answer: 'Intrinsic motivation stems from internal satisfaction, curiosity, and personal values, producing sustained long-term engagement. Extrinsic motivation is driven by external incentives such as financial rewards, social recognition, or fear of penalty.',
+    category: 'Motivation & Human Behavior',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_6',
+    question: 'How do writers overcome creative writer block?',
+    answer: 'Lower your initial standards by allowing yourself to produce an imperfect first draft, take a brisk walk to reset sensory perception, switch from digital typing to handwriting, and seek unexpected conceptual bridges from music, art, and nature.',
+    category: 'Creative Expression',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_7',
+    question: 'What makes a conversation truly meaningful rather than superficial?',
+    answer: 'Meaningful conversations explore vulnerabilities, personal values, philosophical dilemmas, and shared human experiences, welcoming authentic disagreement rather than relying on safe, polite transactional small talk.',
+    category: 'Authentic Dialogue',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_8',
+    question: 'How can two colleagues resolve a professional disagreement constructively?',
+    answer: 'Separate the individuals from the problem, identify shared operational objectives, listen deeply to each other underlying constraints, and collaboratively brainstorm alternatives where both perspectives are synthesized into a stronger outcome.',
+    category: 'Conflict Resolution',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_9',
+    question: 'Why is practicing gratitude beneficial for mental resilience?',
+    answer: 'Practicing gratitude deliberately shifts cognitive attention away from deficiency and threat perception toward appreciation of existing resources, fostering neurological resilience against stress and strengthening social bonds.',
+    category: 'Resilience & Wellbeing',
+    sourceDataset: 'openassistant',
+  },
+  {
+    id: 'oasst_10',
+    question: 'How does critical thinking help evaluate sensationalized information online?',
+    answer: 'Critical thinking interrogates the primary sources of claims, examines whether supporting evidence is verifiable, identifies logical fallacies and emotional manipulation tactics, and actively seeks out credible counter-arguments.',
+    category: 'Critical Thinking',
+    sourceDataset: 'openassistant',
+  },
+];
+
+export const OFFLINE_SCIENCE_STEM_DATASET: QaPair[] = [
+  {
+    id: 'stem_1',
+    question: 'What is the second law of thermodynamics and what is entropy?',
+    answer: 'The second law of thermodynamics states that the total entropy of an isolated physical system never decreases over time, progressing naturally toward maximum thermal equilibrium and statistical disorder.',
+    category: 'Thermodynamics & Statistical Mechanics',
+    sourceDataset: 'science_stem',
+  },
+  {
+    id: 'stem_2',
+    question: 'How does CRISPR-Cas9 genome editing target specific DNA sequences?',
+    answer: 'CRISPR-Cas9 utilizes a single guide RNA molecule complementary to a target genetic sequence; the Cas9 endonuclease binds to the adjacent protospacer adjacent motif (PAM) site and induces a precise double-strand DNA break.',
+    category: 'Molecular Biology & Genetics',
+    sourceDataset: 'science_stem',
+  },
+  {
+    id: 'stem_3',
+    question: 'What is quantum entanglement and why did Einstein refer to it as spooky action at a distance?',
+    answer: 'Quantum entanglement describes states of two or more particles whose quantum physical properties are indelibly correlated regardless of spatial separation, such that measuring one instantaneously determines the state of the other.',
+    category: 'Quantum Physics',
+    sourceDataset: 'science_stem',
+  },
+  {
+    id: 'stem_4',
+    question: 'How do stellar cores synthesize heavy elements through nuclear fusion?',
+    answer: 'Stellar cores fuse hydrogen into helium via the proton-proton chain or CNO cycle; in massive stars, subsequent gravitational contraction enables helium, carbon, neon, oxygen, and silicon fusion up to iron-56.',
+    category: 'Astrophysics & Nuclear Physics',
+    sourceDataset: 'science_stem',
+  },
+  {
+    id: 'stem_5',
+    question: 'What is the fundamental theorem of calculus?',
+    answer: 'The fundamental theorem of calculus establishes that differentiation and integration are inverse operations, proving that the definite integral of a function over an interval equals the difference of its antiderivative evaluated at the endpoints.',
+    category: 'Calculus & Pure Mathematics',
+    sourceDataset: 'science_stem',
+  },
+];
+
+export const OFFLINE_PHILOSOPHY_MIND_DATASET: QaPair[] = [
+  {
+    id: 'phil_1',
+    question: 'What is John Searle Chinese Room argument and what does it demonstrate about computational syntax?',
+    answer: 'Searle Chinese Room thought experiment argues that formal symbol manipulation according to syntax rules does not constitute semantic intentionality or understanding; manipulating symbols does not yield conscious comprehension.',
+    category: 'Philosophy of Mind',
+    sourceDataset: 'philosophy_mind',
+  },
+  {
+    id: 'phil_2',
+    question: 'What is the hard problem of consciousness as formulated by David Chalmers?',
+    answer: 'Chalmers hard problem of consciousness asks why and how physical brain processes and neural computations give rise to subjective, qualitative inner experience (qualia), in contrast to easy problems like behavioral discrimination and attention.',
+    category: 'Philosophy of Mind & Qualia',
+    sourceDataset: 'philosophy_mind',
+  },
+  {
+    id: 'phil_3',
+    question: 'What is the difference between utilitarianism and deontological ethics?',
+    answer: 'Utilitarianism evaluates the moral worth of an action strictly by its consequential utility and net happiness generated, whereas deontology asserts that actions possess intrinsic moral duty governed by universal categorical imperatives regardless of outcomes.',
+    category: 'Moral Philosophy & Ethics',
+    sourceDataset: 'philosophy_mind',
+  },
+  {
+    id: 'phil_4',
+    question: 'What is Occam Razor and how is it applied in scientific reasoning?',
+    answer: 'Occam Razor is the epistemological principle of parsimony stating that entities should not be multiplied beyond necessity; when evaluating competing hypotheses with equal explanatory power, the one requiring fewer unverified assumptions is favored.',
+    category: 'Epistemology & Scientific Method',
+    sourceDataset: 'philosophy_mind',
+  },
+];
+
