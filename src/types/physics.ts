@@ -253,6 +253,30 @@ export interface CorpusCallosumReport {
   final_output: null; // STRICT INVARIANT: Comparison bus only, NEVER emits final user output
 }
 
+export interface CorticalLayerTelemetry {
+  layerId: 'L1_LEXICAL' | 'L2_CONCEPT_COLUMNS' | 'L3_EMISSION';
+  name: string;
+  activeSomasCount: number;
+  conductanceFluxUa: number;
+  dominantClusters: Array<{ name: string; energyMv: number; coherence: number }>;
+}
+
+export interface DeepEquilibriumTelemetry {
+  layers: {
+    l1Lexical: CorticalLayerTelemetry;
+    l2ConceptColumns: CorticalLayerTelemetry;
+    l3Generative: CorticalLayerTelemetry;
+  };
+  relaxationCycles: number;
+  settlingDurationUs: number;
+  initialEnergyMv: number;
+  equilibriumEnergyMv: number;
+  lyapunovDeltaE: number;
+  recurrentFeedbackCurrentUa: number;
+  isEquilibriumReached: boolean;
+  winningConcept: string;
+}
+
 export interface FrontalLobeDecision {
   action: 'SYNTHESIZE' | 'SELECT_LEFT' | 'SELECT_RIGHT' | 'CLARIFY' | 'ABSTAIN';
   synthesisMode: 'PURE_ANALYTICAL' | 'PURE_RELATIONAL' | 'BICAMERAL_COMPLEMENTARY_SYNTHESIS' | 'CLARIFICATION_REQUEST' | 'SAFE_ABSTENTION';
@@ -339,6 +363,7 @@ export interface BicameralMindTelemetry {
     energyMv: number;
     sourceCrystal: string;
   }>;
+  deepCorticalHierarchy?: DeepEquilibriumTelemetry;
 }
 
 export interface MemoryRecallResult {

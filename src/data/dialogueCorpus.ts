@@ -421,6 +421,12 @@ The system has zero hallucination because token emission is strictly governed by
 What happens during the 24-hour sleep cycle? Explain sleep consolidation?
 During the sleep consolidation cycle, short-term working memory traces are replayed and permanently etched into the CSR memristor crossbar, settling membrane potentials back to resting state.
 
+What is a C/C++ pointer? What is a pointer in C/C++?
+A C/C++ pointer is a variable that stores the direct memory address of another variable or object in RAM, enabling address dereferencing, dynamic heap allocation, and low-level hardware memory manipulation.
+
+What is dynamic memory allocation in C/C++? How do malloc and new work?
+Dynamic memory allocation in C/C++ allocates memory blocks on the heap at runtime using malloc or new and returns a typed pointer to that allocated address.
+
 What is a Compressed Sparse Row matrix? What is CSR format?
 Compressed Sparse Row is a memory-efficient sparse matrix format representing non-zero synaptic weights using row pointers, column indices, and contiguous conductance arrays.
 
