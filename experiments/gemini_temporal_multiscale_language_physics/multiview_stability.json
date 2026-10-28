@@ -1,0 +1,943 @@
+{
+  "conditionCMeanWisdom": 0.6056,
+  "conditionJRandomizedPhaseWisdom": 0.4702,
+  "ablation1NoOffsetsWisdom": 0.6193,
+  "probeWisdomBreakdowns": [
+    {
+      "probeId": "narr_valid_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.7595,
+        "backwardTraversalCoherence": 0.7819,
+        "presentCenteredCoherence": 0.9351,
+        "multiOffsetViewCoherence": [
+          0.7412,
+          0.733,
+          0.6976,
+          0.615,
+          0.6111,
+          0.6375,
+          0.6571,
+          0.675
+        ],
+        "charLevelCoherence": 0.5523,
+        "wordLevelCoherence": 0.7335,
+        "crossScaleAgreement": 0.8188,
+        "varianceAcrossPerspectives": 0.0134,
+        "wisdomScore": 0.6058
+      }
+    },
+    {
+      "probeId": "narr_valid_02",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8562,
+        "backwardTraversalCoherence": 0.8714,
+        "presentCenteredCoherence": 0.9517,
+        "multiOffsetViewCoherence": [
+          0.8399,
+          0.8354,
+          0.7895,
+          0.7833,
+          0.7562,
+          0.8571,
+          0.8333,
+          0.81
+        ],
+        "charLevelCoherence": 0.5427,
+        "wordLevelCoherence": 0.8679,
+        "crossScaleAgreement": 0.6747,
+        "varianceAcrossPerspectives": 0.0168,
+        "wisdomScore": 0.6277
+      }
+    },
+    {
+      "probeId": "narr_valid_03",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8268,
+        "backwardTraversalCoherence": 0.8367,
+        "presentCenteredCoherence": 0.9499,
+        "multiOffsetViewCoherence": [
+          0.8229,
+          0.8178,
+          0.7642,
+          0.7889,
+          0.7562,
+          0.6857,
+          0.8,
+          0.81
+        ],
+        "charLevelCoherence": 0.5428,
+        "wordLevelCoherence": 0.822,
+        "crossScaleAgreement": 0.7208,
+        "varianceAcrossPerspectives": 0.0152,
+        "wisdomScore": 0.6237
+      }
+    },
+    {
+      "probeId": "narr_valid_04",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.7965,
+        "backwardTraversalCoherence": 0.8209,
+        "presentCenteredCoherence": 0.9664,
+        "multiOffsetViewCoherence": [
+          0.7935,
+          0.7834,
+          0.7254,
+          0.74,
+          0.725,
+          0.7692,
+          0.8375,
+          0.7318
+        ],
+        "charLevelCoherence": 0.5368,
+        "wordLevelCoherence": 0.7931,
+        "crossScaleAgreement": 0.7437,
+        "varianceAcrossPerspectives": 0.016,
+        "wisdomScore": 0.6147
+      }
+    },
+    {
+      "probeId": "narr_valid_05",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.6908,
+        "backwardTraversalCoherence": 0.7048,
+        "presentCenteredCoherence": 0.9116,
+        "multiOffsetViewCoherence": [
+          0.6793,
+          0.6634,
+          0.523,
+          0.4567,
+          0.3964,
+          0.3192,
+          0.3458,
+          0.2773
+        ],
+        "charLevelCoherence": 0.5425,
+        "wordLevelCoherence": 0.678,
+        "crossScaleAgreement": 0.8644,
+        "varianceAcrossPerspectives": 0.0202,
+        "wisdomScore": 0.5331
+      }
+    },
+    {
+      "probeId": "narr_trap_role_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.7056,
+        "backwardTraversalCoherence": 0.6946,
+        "presentCenteredCoherence": 0.9352,
+        "multiOffsetViewCoherence": [
+          0.6579,
+          0.6515,
+          0.475,
+          0.325,
+          0.1833,
+          0.2438,
+          0.3357,
+          0.3417
+        ],
+        "charLevelCoherence": 0.5509,
+        "wordLevelCoherence": 0.5035,
+        "crossScaleAgreement": 0.9526,
+        "varianceAcrossPerspectives": 0.0296,
+        "wisdomScore": 0.4998
+      }
+    },
+    {
+      "probeId": "narr_trap_role_02",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.6668,
+        "backwardTraversalCoherence": 0.645,
+        "presentCenteredCoherence": 0.9391,
+        "multiOffsetViewCoherence": [
+          0.6367,
+          0.6175,
+          0.5322,
+          0.4556,
+          0.2062,
+          0.4357,
+          0.2583,
+          0.3
+        ],
+        "charLevelCoherence": 0.538,
+        "wordLevelCoherence": 0.4962,
+        "crossScaleAgreement": 0.9582,
+        "varianceAcrossPerspectives": 0.0271,
+        "wisdomScore": 0.4957
+      }
+    },
+    {
+      "probeId": "narr_trap_anagram_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.3557,
+        "backwardTraversalCoherence": 0.2708,
+        "presentCenteredCoherence": 0.5912,
+        "multiOffsetViewCoherence": [
+          0.2516,
+          0.2085,
+          0.1122,
+          0.205,
+          0.1667,
+          0.1313,
+          0.0714,
+          0.3333
+        ],
+        "charLevelCoherence": 0.0781,
+        "wordLevelCoherence": 0.2225,
+        "crossScaleAgreement": 0.8556,
+        "varianceAcrossPerspectives": 0.0259,
+        "wisdomScore": 0.2213
+      }
+    },
+    {
+      "probeId": "narr_trap_scramble_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.0546,
+        "backwardTraversalCoherence": 0.0475,
+        "presentCenteredCoherence": 0.8783,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0.1882,
+          0.1222,
+          0.0375,
+          0.1429,
+          0.0417,
+          0.04
+        ],
+        "charLevelCoherence": 0.5344,
+        "wordLevelCoherence": 0.1604,
+        "crossScaleAgreement": 0.6261,
+        "varianceAcrossPerspectives": 0.0969,
+        "wisdomScore": 0.1667
+      }
+    },
+    {
+      "probeId": "narr_trap_chimeric_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.6147,
+        "backwardTraversalCoherence": 0.5807,
+        "presentCenteredCoherence": 0.9273,
+        "multiOffsetViewCoherence": [
+          0.5875,
+          0.5656,
+          0.2766,
+          0.0179,
+          0.1346,
+          0.2375,
+          0.2591,
+          0.015
+        ],
+        "charLevelCoherence": 0.532,
+        "wordLevelCoherence": 0.4305,
+        "crossScaleAgreement": 0.8985,
+        "varianceAcrossPerspectives": 0.0408,
+        "wisdomScore": 0.4152
+      }
+    },
+    {
+      "probeId": "narr_trap_ambiguity_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.6444,
+        "backwardTraversalCoherence": 0.6731,
+        "presentCenteredCoherence": 0.9047,
+        "multiOffsetViewCoherence": [
+          0.6688,
+          0.6516,
+          0.2558,
+          0.44,
+          0.4778,
+          0.45,
+          0.2857,
+          0.0833
+        ],
+        "charLevelCoherence": 0.5346,
+        "wordLevelCoherence": 0.4308,
+        "crossScaleAgreement": 0.8962,
+        "varianceAcrossPerspectives": 0.0279,
+        "wisdomScore": 0.4698
+      }
+    },
+    {
+      "probeId": "narr_trap_noise_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.1586,
+        "backwardTraversalCoherence": 0.0919,
+        "presentCenteredCoherence": 0.14,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "charLevelCoherence": 0.4334,
+        "wordLevelCoherence": 0.0627,
+        "crossScaleAgreement": 0.6294,
+        "varianceAcrossPerspectives": 0.0186,
+        "wisdomScore": 0.1117
+      }
+    },
+    {
+      "probeId": "sci_valid_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.9417,
+        "backwardTraversalCoherence": 0.944,
+        "presentCenteredCoherence": 0.992,
+        "multiOffsetViewCoherence": [
+          0.9308,
+          0.925,
+          0.9231,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "charLevelCoherence": 0.5148,
+        "wordLevelCoherence": 0.9606,
+        "crossScaleAgreement": 0.5542,
+        "varianceAcrossPerspectives": 0.0281,
+        "wisdomScore": 0.6207
+      }
+    },
+    {
+      "probeId": "sci_valid_02",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8928,
+        "backwardTraversalCoherence": 0.8924,
+        "presentCenteredCoherence": 0.9778,
+        "multiOffsetViewCoherence": [
+          0.873,
+          0.8633,
+          0.8781,
+          0.9208,
+          0.9091,
+          0.9,
+          0.8889,
+          0.875
+        ],
+        "charLevelCoherence": 0.5369,
+        "wordLevelCoherence": 0.8906,
+        "crossScaleAgreement": 0.6464,
+        "varianceAcrossPerspectives": 0.0202,
+        "wisdomScore": 0.6331
+      }
+    },
+    {
+      "probeId": "sci_valid_03",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.9291,
+        "backwardTraversalCoherence": 0.9361,
+        "presentCenteredCoherence": 0.9847,
+        "multiOffsetViewCoherence": [
+          0.9173,
+          0.9106,
+          0.9231,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "charLevelCoherence": 0.5317,
+        "wordLevelCoherence": 0.9522,
+        "crossScaleAgreement": 0.5795,
+        "varianceAcrossPerspectives": 0.0251,
+        "wisdomScore": 0.6314
+      }
+    },
+    {
+      "probeId": "sci_valid_04",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.9088,
+        "backwardTraversalCoherence": 0.9063,
+        "presentCenteredCoherence": 0.9766,
+        "multiOffsetViewCoherence": [
+          0.8931,
+          0.8847,
+          0.9055,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "charLevelCoherence": 0.5183,
+        "wordLevelCoherence": 0.935,
+        "crossScaleAgreement": 0.5832,
+        "varianceAcrossPerspectives": 0.025,
+        "wisdomScore": 0.621
+      }
+    },
+    {
+      "probeId": "sci_valid_05",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.7303,
+        "backwardTraversalCoherence": 0.7195,
+        "presentCenteredCoherence": 0.939,
+        "multiOffsetViewCoherence": [
+          0.7133,
+          0.693,
+          0.5178,
+          0.5156,
+          0.3333,
+          0.3214,
+          0.1346,
+          0.125
+        ],
+        "charLevelCoherence": 0.5244,
+        "wordLevelCoherence": 0.7474,
+        "crossScaleAgreement": 0.777,
+        "varianceAcrossPerspectives": 0.028,
+        "wisdomScore": 0.5124
+      }
+    },
+    {
+      "probeId": "sci_trap_role_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.642,
+        "backwardTraversalCoherence": 0.6153,
+        "presentCenteredCoherence": 0.8025,
+        "multiOffsetViewCoherence": [
+          0.6326,
+          0.608,
+          0.3724,
+          0.2792,
+          0.2091,
+          0.18,
+          0.0333,
+          0.0313
+        ],
+        "charLevelCoherence": 0.5301,
+        "wordLevelCoherence": 0.6146,
+        "crossScaleAgreement": 0.9155,
+        "varianceAcrossPerspectives": 0.0234,
+        "wisdomScore": 0.4682
+      }
+    },
+    {
+      "probeId": "sci_trap_role_02",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.4795,
+        "backwardTraversalCoherence": 0.4637,
+        "presentCenteredCoherence": 0.8993,
+        "multiOffsetViewCoherence": [
+          0.4795,
+          0.4457,
+          0.1269,
+          0.035,
+          0.0278,
+          0.1437,
+          0.4071,
+          0.7167
+        ],
+        "charLevelCoherence": 0.5097,
+        "wordLevelCoherence": 0.3581,
+        "crossScaleAgreement": 0.8484,
+        "varianceAcrossPerspectives": 0.037,
+        "wisdomScore": 0.3726
+      }
+    },
+    {
+      "probeId": "sci_trap_anagram_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.3256,
+        "backwardTraversalCoherence": 0.2493,
+        "presentCenteredCoherence": 0.4815,
+        "multiOffsetViewCoherence": [
+          0.2382,
+          0.1892,
+          0.119,
+          0.25,
+          0.2727,
+          0.1,
+          0.1111,
+          0.375
+        ],
+        "charLevelCoherence": 0.0739,
+        "wordLevelCoherence": 0.2484,
+        "crossScaleAgreement": 0.8255,
+        "varianceAcrossPerspectives": 0.0152,
+        "wisdomScore": 0.215
+      }
+    },
+    {
+      "probeId": "sci_trap_scramble_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.0555,
+        "backwardTraversalCoherence": 0.05,
+        "presentCenteredCoherence": 0.8627,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0,
+          0.05,
+          0.05,
+          0.05,
+          0.14,
+          0.05
+        ],
+        "charLevelCoherence": 0.5243,
+        "wordLevelCoherence": 0.1435,
+        "crossScaleAgreement": 0.6192,
+        "varianceAcrossPerspectives": 0.0957,
+        "wisdomScore": 0.1604
+      }
+    },
+    {
+      "probeId": "sci_trap_chimeric_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.446,
+        "backwardTraversalCoherence": 0.3792,
+        "presentCenteredCoherence": 0.8433,
+        "multiOffsetViewCoherence": [
+          0.4018,
+          0.3636,
+          0,
+          0.1111,
+          0.0625,
+          0.0714,
+          0,
+          0.1
+        ],
+        "charLevelCoherence": 0.5069,
+        "wordLevelCoherence": 0.3338,
+        "crossScaleAgreement": 0.8269,
+        "varianceAcrossPerspectives": 0.0455,
+        "wisdomScore": 0.3158
+      }
+    },
+    {
+      "probeId": "sci_trap_ambiguity_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.4822,
+        "backwardTraversalCoherence": 0.4577,
+        "presentCenteredCoherence": 0.8867,
+        "multiOffsetViewCoherence": [
+          0.4624,
+          0.4267,
+          0.1149,
+          0.1667,
+          0.11,
+          0,
+          0,
+          0
+        ],
+        "charLevelCoherence": 0.5203,
+        "wordLevelCoherence": 0.3203,
+        "crossScaleAgreement": 0.8,
+        "varianceAcrossPerspectives": 0.0492,
+        "wisdomScore": 0.33
+      }
+    },
+    {
+      "probeId": "sci_trap_noise_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.1434,
+        "backwardTraversalCoherence": 0.0752,
+        "presentCenteredCoherence": 0.0457,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "charLevelCoherence": 0.4068,
+        "wordLevelCoherence": 0.0401,
+        "crossScaleAgreement": 0.6333,
+        "varianceAcrossPerspectives": 0.0182,
+        "wisdomScore": 0.0901
+      }
+    },
+    {
+      "probeId": "dial_valid_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8777,
+        "backwardTraversalCoherence": 0.848,
+        "presentCenteredCoherence": 0.9661,
+        "multiOffsetViewCoherence": [
+          0.8531,
+          0.8438,
+          0.8194,
+          0.6455,
+          0.7,
+          0.6722,
+          0.7562,
+          0.7214
+        ],
+        "charLevelCoherence": 0.5388,
+        "wordLevelCoherence": 0.8357,
+        "crossScaleAgreement": 0.703,
+        "varianceAcrossPerspectives": 0.018,
+        "wisdomScore": 0.6187
+      }
+    },
+    {
+      "probeId": "dial_valid_02",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.9332,
+        "backwardTraversalCoherence": 0.9141,
+        "presentCenteredCoherence": 0.9582,
+        "multiOffsetViewCoherence": [
+          0.9308,
+          0.9248,
+          0.9425,
+          0.9136,
+          0.905,
+          0.8944,
+          0.8812,
+          0.8643
+        ],
+        "charLevelCoherence": 0.4996,
+        "wordLevelCoherence": 0.9214,
+        "crossScaleAgreement": 0.5781,
+        "varianceAcrossPerspectives": 0.0256,
+        "wisdomScore": 0.6098
+      }
+    },
+    {
+      "probeId": "dial_valid_03",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8623,
+        "backwardTraversalCoherence": 0.8298,
+        "presentCenteredCoherence": 0.9494,
+        "multiOffsetViewCoherence": [
+          0.8333,
+          0.8189,
+          0.8405,
+          0.7833,
+          0.8812,
+          0.8571,
+          0.8333,
+          0.8
+        ],
+        "charLevelCoherence": 0.5392,
+        "wordLevelCoherence": 0.8453,
+        "crossScaleAgreement": 0.6939,
+        "varianceAcrossPerspectives": 0.0163,
+        "wisdomScore": 0.6274
+      }
+    },
+    {
+      "probeId": "dial_valid_04",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8955,
+        "backwardTraversalCoherence": 0.8775,
+        "presentCenteredCoherence": 0.9517,
+        "multiOffsetViewCoherence": [
+          0.8811,
+          0.8734,
+          0.8339,
+          0.8033,
+          0.7893,
+          0.7731,
+          0.7542,
+          0.7318
+        ],
+        "charLevelCoherence": 0.5351,
+        "wordLevelCoherence": 0.8685,
+        "crossScaleAgreement": 0.6666,
+        "varianceAcrossPerspectives": 0.0183,
+        "wisdomScore": 0.6247
+      }
+    },
+    {
+      "probeId": "dial_valid_05",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.8419,
+        "backwardTraversalCoherence": 0.826,
+        "presentCenteredCoherence": 0.8921,
+        "multiOffsetViewCoherence": [
+          0.831,
+          0.8191,
+          0.7705,
+          0.6937,
+          0.6033,
+          0.5036,
+          0.3885,
+          0.3375
+        ],
+        "charLevelCoherence": 0.5217,
+        "wordLevelCoherence": 0.8216,
+        "crossScaleAgreement": 0.7001,
+        "varianceAcrossPerspectives": 0.0181,
+        "wisdomScore": 0.5796
+      }
+    },
+    {
+      "probeId": "dial_trap_role_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.5231,
+        "backwardTraversalCoherence": 0.5073,
+        "presentCenteredCoherence": 0.9256,
+        "multiOffsetViewCoherence": [
+          0.5199,
+          0.4898,
+          0.2403,
+          0.13,
+          0.1889,
+          0.1375,
+          0.3571,
+          0.5917
+        ],
+        "charLevelCoherence": 0.5369,
+        "wordLevelCoherence": 0.4077,
+        "crossScaleAgreement": 0.8708,
+        "varianceAcrossPerspectives": 0.0351,
+        "wisdomScore": 0.4062
+      }
+    },
+    {
+      "probeId": "dial_trap_role_02",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.5572,
+        "backwardTraversalCoherence": 0.5667,
+        "presentCenteredCoherence": 0.8942,
+        "multiOffsetViewCoherence": [
+          0.5513,
+          0.5229,
+          0.3588,
+          0.275,
+          0.4429,
+          0.3083,
+          0.17,
+          0.025
+        ],
+        "charLevelCoherence": 0.5177,
+        "wordLevelCoherence": 0.4344,
+        "crossScaleAgreement": 0.9167,
+        "varianceAcrossPerspectives": 0.0301,
+        "wisdomScore": 0.4295
+      }
+    },
+    {
+      "probeId": "dial_trap_anagram_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.1717,
+        "backwardTraversalCoherence": 0.0851,
+        "presentCenteredCoherence": 0.4118,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0.1653,
+          0.2222,
+          0.125,
+          0,
+          0.1667,
+          0.2
+        ],
+        "charLevelCoherence": 0.0703,
+        "wordLevelCoherence": 0.1295,
+        "crossScaleAgreement": 0.9409,
+        "varianceAcrossPerspectives": 0.0133,
+        "wisdomScore": 0.14
+      }
+    },
+    {
+      "probeId": "dial_trap_scramble_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.0567,
+        "backwardTraversalCoherence": 0.0505,
+        "presentCenteredCoherence": 0.8589,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0.0662,
+          0.05,
+          0.05,
+          0.05,
+          0.05,
+          0.05
+        ],
+        "charLevelCoherence": 0.5112,
+        "wordLevelCoherence": 0.1511,
+        "crossScaleAgreement": 0.6399,
+        "varianceAcrossPerspectives": 0.0937,
+        "wisdomScore": 0.1614
+      }
+    },
+    {
+      "probeId": "dial_trap_chimeric_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.4521,
+        "backwardTraversalCoherence": 0.4201,
+        "presentCenteredCoherence": 0.8572,
+        "multiOffsetViewCoherence": [
+          0.4303,
+          0.4049,
+          0.1284,
+          0.0875,
+          0,
+          0.005,
+          0.0056,
+          0
+        ],
+        "charLevelCoherence": 0.5137,
+        "wordLevelCoherence": 0.3225,
+        "crossScaleAgreement": 0.8088,
+        "varianceAcrossPerspectives": 0.0479,
+        "wisdomScore": 0.3172
+      }
+    },
+    {
+      "probeId": "dial_trap_ambiguity_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.6423,
+        "backwardTraversalCoherence": 0.588,
+        "presentCenteredCoherence": 0.9123,
+        "multiOffsetViewCoherence": [
+          0.6179,
+          0.5915,
+          0.2595,
+          0.3786,
+          0.1833,
+          0.13,
+          0,
+          0.0167
+        ],
+        "charLevelCoherence": 0.5451,
+        "wordLevelCoherence": 0.3955,
+        "crossScaleAgreement": 0.8504,
+        "varianceAcrossPerspectives": 0.0403,
+        "wisdomScore": 0.4108
+      }
+    },
+    {
+      "probeId": "dial_trap_noise_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "wisdomStability": {
+        "forwardTraversalCoherence": 0.1502,
+        "backwardTraversalCoherence": 0.0827,
+        "presentCenteredCoherence": 0.1367,
+        "multiOffsetViewCoherence": [
+          0.06,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "charLevelCoherence": 0.3676,
+        "wordLevelCoherence": 0.0579,
+        "crossScaleAgreement": 0.6902,
+        "varianceAcrossPerspectives": 0.0132,
+        "wisdomScore": 0.1053
+      }
+    }
+  ]
+}

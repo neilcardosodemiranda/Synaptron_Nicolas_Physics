@@ -1,0 +1,6 @@
+{
+  "name": "Synaptron: Neuromorphic Particle Computer",
+  "description": "Interactive neuromorphic computer simulating linguistic particle physics where letters and words behave as relativistic particles, quarks, and hadrons mediated by spiking synaptic fields.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

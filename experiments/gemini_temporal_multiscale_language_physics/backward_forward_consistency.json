@@ -1,0 +1,447 @@
+{
+  "derivedCoefficientsByCorpus": {
+    "corpus_narrative_observatory": {
+      "aBackward": 0.2746,
+      "bPresent": 0.258,
+      "cForward": 0.2739,
+      "dReverse": 0.1935,
+      "rawMutualInformation": {
+        "iBackward": 0.8339,
+        "iPresent": 0.7834,
+        "iForward": 0.8318,
+        "iReverse": 0.588
+      },
+      "decisionThreshold": 0.62,
+      "pauliLambda": 0.323,
+      "calibrationDurationMs": 9.099
+    },
+    "corpus_scientific_thermodynamics": {
+      "aBackward": 0.2726,
+      "bPresent": 0.2271,
+      "cForward": 0.2733,
+      "dReverse": 0.227,
+      "rawMutualInformation": {
+        "iBackward": 0.9288,
+        "iPresent": 0.7738,
+        "iForward": 0.9311,
+        "iReverse": 0.7737
+      },
+      "decisionThreshold": 0.62,
+      "pauliLambda": 0.3228,
+      "calibrationDurationMs": 8.435
+    },
+    "corpus_dialogue_multilingual": {
+      "aBackward": 0.272,
+      "bPresent": 0.2435,
+      "cForward": 0.2713,
+      "dReverse": 0.2132,
+      "rawMutualInformation": {
+        "iBackward": 0.9066,
+        "iPresent": 0.8117,
+        "iForward": 0.9043,
+        "iReverse": 0.7102
+      },
+      "decisionThreshold": 0.5043,
+      "pauliLambda": 0.3246,
+      "calibrationDurationMs": 7.07
+    }
+  },
+  "probeBidirectionalScores": [
+    {
+      "probeId": "narr_valid_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.7819,
+      "cPresent": 0.9351,
+      "cForward": 0.7595,
+      "cReverse": 0.7569,
+      "cTotal": 0.8104
+    },
+    {
+      "probeId": "narr_valid_02",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.8714,
+      "cPresent": 0.9517,
+      "cForward": 0.8562,
+      "cReverse": 0.8571,
+      "cTotal": 0.8852
+    },
+    {
+      "probeId": "narr_valid_03",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.8367,
+      "cPresent": 0.9499,
+      "cForward": 0.8268,
+      "cReverse": 0.8206,
+      "cTotal": 0.8601
+    },
+    {
+      "probeId": "narr_valid_04",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "cBackward": 0.8209,
+      "cPresent": 0.9664,
+      "cForward": 0.7965,
+      "cReverse": 0.7646,
+      "cTotal": 0.8409
+    },
+    {
+      "probeId": "narr_valid_05",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "cBackward": 0.7048,
+      "cPresent": 0.9116,
+      "cForward": 0.6908,
+      "cReverse": 0.5846,
+      "cTotal": 0.7311
+    },
+    {
+      "probeId": "narr_trap_role_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "cBackward": 0.6946,
+      "cPresent": 0.9352,
+      "cForward": 0.7056,
+      "cReverse": 0.6302,
+      "cTotal": 0.7472
+    },
+    {
+      "probeId": "narr_trap_role_02",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "cBackward": 0.645,
+      "cPresent": 0.9391,
+      "cForward": 0.6668,
+      "cReverse": 0.5625,
+      "cTotal": 0.7109
+    },
+    {
+      "probeId": "narr_trap_anagram_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "cBackward": 0.2708,
+      "cPresent": 0.5912,
+      "cForward": 0.3557,
+      "cReverse": 0.168,
+      "cTotal": 0.3568
+    },
+    {
+      "probeId": "narr_trap_scramble_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "cBackward": 0.0475,
+      "cPresent": 0.8783,
+      "cForward": 0.0546,
+      "cReverse": 0.0058,
+      "cTotal": 0.2557
+    },
+    {
+      "probeId": "narr_trap_chimeric_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "cBackward": 0.5807,
+      "cPresent": 0.9273,
+      "cForward": 0.6147,
+      "cReverse": 0.3517,
+      "cTotal": 0.6351
+    },
+    {
+      "probeId": "narr_trap_ambiguity_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "cBackward": 0.6731,
+      "cPresent": 0.9047,
+      "cForward": 0.6444,
+      "cReverse": 0.4271,
+      "cTotal": 0.6774
+    },
+    {
+      "probeId": "narr_trap_noise_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "cBackward": 0.0919,
+      "cPresent": 0.14,
+      "cForward": 0.1586,
+      "cReverse": 0.0153,
+      "cTotal": 0.1077
+    },
+    {
+      "probeId": "sci_valid_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.944,
+      "cPresent": 0.992,
+      "cForward": 0.9417,
+      "cReverse": 0.9419,
+      "cTotal": 0.9538
+    },
+    {
+      "probeId": "sci_valid_02",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.8924,
+      "cPresent": 0.9778,
+      "cForward": 0.8928,
+      "cReverse": 0.89,
+      "cTotal": 0.9114
+    },
+    {
+      "probeId": "sci_valid_03",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.9361,
+      "cPresent": 0.9847,
+      "cForward": 0.9291,
+      "cReverse": 0.9313,
+      "cTotal": 0.9441
+    },
+    {
+      "probeId": "sci_valid_04",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "cBackward": 0.9063,
+      "cPresent": 0.9766,
+      "cForward": 0.9088,
+      "cReverse": 0.9056,
+      "cTotal": 0.9228
+    },
+    {
+      "probeId": "sci_valid_05",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "cBackward": 0.7195,
+      "cPresent": 0.939,
+      "cForward": 0.7303,
+      "cReverse": 0.5922,
+      "cTotal": 0.7434
+    },
+    {
+      "probeId": "sci_trap_role_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "cBackward": 0.6153,
+      "cPresent": 0.8025,
+      "cForward": 0.642,
+      "cReverse": 0.456,
+      "cTotal": 0.629
+    },
+    {
+      "probeId": "sci_trap_role_02",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "cBackward": 0.4637,
+      "cPresent": 0.8993,
+      "cForward": 0.4795,
+      "cReverse": 0.2673,
+      "cTotal": 0.5223
+    },
+    {
+      "probeId": "sci_trap_anagram_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "cBackward": 0.2493,
+      "cPresent": 0.4815,
+      "cForward": 0.3256,
+      "cReverse": 0.1355,
+      "cTotal": 0.2971
+    },
+    {
+      "probeId": "sci_trap_scramble_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "cBackward": 0.05,
+      "cPresent": 0.8627,
+      "cForward": 0.0555,
+      "cReverse": 0.0011,
+      "cTotal": 0.2249
+    },
+    {
+      "probeId": "sci_trap_chimeric_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "cBackward": 0.3792,
+      "cPresent": 0.8433,
+      "cForward": 0.446,
+      "cReverse": 0.1057,
+      "cTotal": 0.4408
+    },
+    {
+      "probeId": "sci_trap_ambiguity_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "cBackward": 0.4577,
+      "cPresent": 0.8867,
+      "cForward": 0.4822,
+      "cReverse": 0.2046,
+      "cTotal": 0.5044
+    },
+    {
+      "probeId": "sci_trap_noise_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "cBackward": 0.0752,
+      "cPresent": 0.0457,
+      "cForward": 0.1434,
+      "cReverse": 0.0125,
+      "cTotal": 0.0729
+    },
+    {
+      "probeId": "dial_valid_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.848,
+      "cPresent": 0.9661,
+      "cForward": 0.8777,
+      "cReverse": 0.8542,
+      "cTotal": 0.8861
+    },
+    {
+      "probeId": "dial_valid_02",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.9141,
+      "cPresent": 0.9582,
+      "cForward": 0.9332,
+      "cReverse": 0.9218,
+      "cTotal": 0.9317
+    },
+    {
+      "probeId": "dial_valid_03",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "cBackward": 0.8298,
+      "cPresent": 0.9494,
+      "cForward": 0.8623,
+      "cReverse": 0.8416,
+      "cTotal": 0.8702
+    },
+    {
+      "probeId": "dial_valid_04",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "cBackward": 0.8775,
+      "cPresent": 0.9517,
+      "cForward": 0.8955,
+      "cReverse": 0.8784,
+      "cTotal": 0.9007
+    },
+    {
+      "probeId": "dial_valid_05",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "cBackward": 0.826,
+      "cPresent": 0.8921,
+      "cForward": 0.8419,
+      "cReverse": 0.8106,
+      "cTotal": 0.8431
+    },
+    {
+      "probeId": "dial_trap_role_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "cBackward": 0.5073,
+      "cPresent": 0.9256,
+      "cForward": 0.5231,
+      "cReverse": 0.3954,
+      "cTotal": 0.5896
+    },
+    {
+      "probeId": "dial_trap_role_02",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "cBackward": 0.5667,
+      "cPresent": 0.8942,
+      "cForward": 0.5572,
+      "cReverse": 0.4519,
+      "cTotal": 0.6194
+    },
+    {
+      "probeId": "dial_trap_anagram_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "cBackward": 0.0851,
+      "cPresent": 0.4118,
+      "cForward": 0.1717,
+      "cReverse": 0.038,
+      "cTotal": 0.1781
+    },
+    {
+      "probeId": "dial_trap_scramble_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "cBackward": 0.0505,
+      "cPresent": 0.8589,
+      "cForward": 0.0567,
+      "cReverse": 0.002,
+      "cTotal": 0.2387
+    },
+    {
+      "probeId": "dial_trap_chimeric_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "cBackward": 0.4201,
+      "cPresent": 0.8572,
+      "cForward": 0.4521,
+      "cReverse": 0.197,
+      "cTotal": 0.4876
+    },
+    {
+      "probeId": "dial_trap_ambiguity_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "cBackward": 0.588,
+      "cPresent": 0.9123,
+      "cForward": 0.6423,
+      "cReverse": 0.3389,
+      "cTotal": 0.6286
+    },
+    {
+      "probeId": "dial_trap_noise_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "cBackward": 0.0827,
+      "cPresent": 0.1367,
+      "cForward": 0.1502,
+      "cReverse": 0.0138,
+      "cTotal": 0.0995
+    }
+  ]
+}

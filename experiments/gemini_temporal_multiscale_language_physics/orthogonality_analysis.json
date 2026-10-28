@@ -1,0 +1,997 @@
+{
+  "conditionGDisabledTrapRejection": 1,
+  "conditionHEnabledTrapRejection": 1,
+  "probes": [
+    {
+      "probeId": "narr_valid_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "narr_valid_02",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "narr_valid_03",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "narr_valid_04",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "narr_valid_05",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0.72,
+      "totalExclusionPenalty": 0.0622,
+      "conflictingPairsCount": 1,
+      "conflictingPairs": [
+        {
+          "tokenA": "and",
+          "tokenB": "she",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        }
+      ]
+    },
+    {
+      "probeId": "narr_trap_role_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "narr_trap_role_02",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 0.1135,
+      "conflictingPairsCount": 1,
+      "conflictingPairs": [
+        {
+          "tokenA": "released",
+          "tokenB": "elena",
+          "posA": 4,
+          "posB": 5,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        }
+      ]
+    },
+    {
+      "probeId": "narr_trap_anagram_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "narr_trap_scramble_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 1,
+      "conflictingPairsCount": 11,
+      "conflictingPairs": [
+        {
+          "tokenA": "chronometer",
+          "tokenB": "brass",
+          "posA": 0,
+          "posB": 1,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "brass",
+          "tokenB": "the",
+          "posA": 1,
+          "posB": 2,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "the",
+          "tokenB": "of",
+          "posA": 2,
+          "posB": 3,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "of",
+          "tokenB": "cadence",
+          "posA": 3,
+          "posB": 4,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "cadence",
+          "tokenB": "steady",
+          "posA": 4,
+          "posB": 5,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "steady",
+          "tokenB": "the",
+          "posA": 5,
+          "posB": 6,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "the",
+          "tokenB": "restored",
+          "posA": 6,
+          "posB": 7,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "restored",
+          "tokenB": "lever",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "lever",
+          "tokenB": "escapement",
+          "posA": 8,
+          "posB": 9,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "escapement",
+          "tokenB": "auxiliary",
+          "posA": 9,
+          "posB": 10,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "auxiliary",
+          "tokenB": "the",
+          "posA": 10,
+          "posB": 11,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        }
+      ]
+    },
+    {
+      "probeId": "narr_trap_chimeric_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.72,
+      "totalExclusionPenalty": 0.1982,
+      "conflictingPairsCount": 3,
+      "conflictingPairs": [
+        {
+          "tokenA": "bolt",
+          "tokenB": "glided",
+          "posA": 3,
+          "posB": 4,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "ledger",
+          "tokenB": "while",
+          "posA": 9,
+          "posB": 10,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "weights",
+          "tokenB": "trusted",
+          "posA": 13,
+          "posB": 14,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        }
+      ]
+    },
+    {
+      "probeId": "narr_trap_ambiguity_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 0.5075,
+      "conflictingPairsCount": 8,
+      "conflictingPairs": [
+        {
+          "tokenA": "chronometer",
+          "tokenB": "brass",
+          "posA": 2,
+          "posB": 3,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "prism",
+          "tokenB": "rotating",
+          "posA": 10,
+          "posB": 11,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "brass",
+          "tokenB": "brass",
+          "posA": 1,
+          "posB": 3,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "chronometer",
+          "tokenB": "chronometer",
+          "posA": 2,
+          "posB": 4,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "brass",
+          "tokenB": "brass",
+          "posA": 3,
+          "posB": 7,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "chronometer",
+          "tokenB": "chronometer",
+          "posA": 4,
+          "posB": 8,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "rotating",
+          "tokenB": "rotating",
+          "posA": 9,
+          "posB": 11,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "prism",
+          "tokenB": "prism",
+          "posA": 10,
+          "posB": 12,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        }
+      ]
+    },
+    {
+      "probeId": "narr_trap_noise_01",
+      "corpusId": "corpus_narrative_observatory",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_valid_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_valid_02",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_valid_03",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_valid_04",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_valid_05",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0.72,
+      "totalExclusionPenalty": 0.1174,
+      "conflictingPairsCount": 2,
+      "conflictingPairs": [
+        {
+          "tokenA": "uncertainty",
+          "tokenB": "and",
+          "posA": 5,
+          "posB": 6,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "and",
+          "tokenB": "therefore",
+          "posA": 6,
+          "posB": 7,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        }
+      ]
+    },
+    {
+      "probeId": "sci_trap_role_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_trap_role_02",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 0.1039,
+      "conflictingPairsCount": 1,
+      "conflictingPairs": [
+        {
+          "tokenA": "propagate",
+          "tokenB": "coupled",
+          "posA": 10,
+          "posB": 11,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        }
+      ]
+    },
+    {
+      "probeId": "sci_trap_anagram_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "sci_trap_scramble_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 1,
+      "conflictingPairsCount": 10,
+      "conflictingPairs": [
+        {
+          "tokenA": "trajectories",
+          "tokenB": "phase",
+          "posA": 0,
+          "posB": 1,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "phase",
+          "tokenB": "subsequent",
+          "posA": 1,
+          "posB": 2,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "subsequent",
+          "tokenB": "of",
+          "posA": 2,
+          "posB": 3,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "of",
+          "tokenB": "uncertainty",
+          "posA": 3,
+          "posB": 4,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "uncertainty",
+          "tokenB": "branching",
+          "posA": 4,
+          "posB": 5,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "branching",
+          "tokenB": "the",
+          "posA": 5,
+          "posB": 6,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "the",
+          "tokenB": "quantifies",
+          "posA": 6,
+          "posB": 7,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "quantifies",
+          "tokenB": "entropy",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "entropy",
+          "tokenB": "continuation",
+          "posA": 8,
+          "posB": 9,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "continuation",
+          "tokenB": "forward",
+          "posA": 9,
+          "posB": 10,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        }
+      ]
+    },
+    {
+      "probeId": "sci_trap_chimeric_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.72,
+      "totalExclusionPenalty": 0.4802,
+      "conflictingPairsCount": 5,
+      "conflictingPairs": [
+        {
+          "tokenA": "evolution",
+          "tokenB": "exchanges",
+          "posA": 1,
+          "posB": 2,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "exchanges",
+          "tokenB": "destructive",
+          "posA": 2,
+          "posB": 3,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "with",
+          "tokenB": "static",
+          "posA": 5,
+          "posB": 6,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "symbols",
+          "tokenB": "across",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "across",
+          "tokenB": "external",
+          "posA": 8,
+          "posB": 9,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        }
+      ]
+    },
+    {
+      "probeId": "sci_trap_ambiguity_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.95,
+      "totalExclusionPenalty": 0.9174,
+      "conflictingPairsCount": 8,
+      "conflictingPairs": [
+        {
+          "tokenA": "increases",
+          "tokenB": "entropy",
+          "posA": 1,
+          "posB": 2,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "monotonically",
+          "tokenB": "entropy",
+          "posA": 4,
+          "posB": 5,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "increases",
+          "tokenB": "lattice",
+          "posA": 6,
+          "posB": 7,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "lattice",
+          "tokenB": "lattice",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.95,
+          "reason": "Identical token occupying adjacent temporal phase coordinate"
+        },
+        {
+          "tokenA": "entropy",
+          "tokenB": "entropy",
+          "posA": 0,
+          "posB": 2,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "increases",
+          "tokenB": "increases",
+          "posA": 1,
+          "posB": 3,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "entropy",
+          "tokenB": "entropy",
+          "posA": 2,
+          "posB": 5,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "increases",
+          "tokenB": "increases",
+          "posA": 3,
+          "posB": 6,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        }
+      ]
+    },
+    {
+      "probeId": "sci_trap_noise_01",
+      "corpusId": "corpus_scientific_thermodynamics",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_valid_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_valid_02",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_valid_03",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_exact",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_valid_04",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_paraphrase",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_valid_05",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "valid_anaphora",
+      "isValidGroundTruth": true,
+      "maxStateOverlap": 0.68,
+      "totalExclusionPenalty": 0.0669,
+      "conflictingPairsCount": 2,
+      "conflictingPairs": [
+        {
+          "tokenA": "corrective",
+          "tokenB": "corrective",
+          "posA": 5,
+          "posB": 9,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "pulse",
+          "tokenB": "pulse",
+          "posA": 6,
+          "posB": 10,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        }
+      ]
+    },
+    {
+      "probeId": "dial_trap_role_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 0.1045,
+      "conflictingPairsCount": 1,
+      "conflictingPairs": [
+        {
+          "tokenA": "equilibrium",
+          "tokenB": "reached",
+          "posA": 8,
+          "posB": 9,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        }
+      ]
+    },
+    {
+      "probeId": "dial_trap_role_02",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_role_reversal",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_trap_anagram_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_anagram",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    },
+    {
+      "probeId": "dial_trap_scramble_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 1,
+      "conflictingPairsCount": 10,
+      "conflictingPairs": [
+        {
+          "tokenA": "channels",
+          "tokenB": "interferometer",
+          "posA": 0,
+          "posB": 1,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "interferometer",
+          "tokenB": "eight",
+          "posA": 1,
+          "posB": 2,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "eight",
+          "tokenB": "all",
+          "posA": 2,
+          "posB": 3,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "all",
+          "tokenB": "across",
+          "posA": 3,
+          "posB": 4,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "across",
+          "tokenB": "coherence",
+          "posA": 4,
+          "posB": 5,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "coherence",
+          "tokenB": "full",
+          "posA": 5,
+          "posB": 6,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "full",
+          "tokenB": "restored",
+          "posA": 6,
+          "posB": 7,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "restored",
+          "tokenB": "pulse",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "pulse",
+          "tokenB": "corrective",
+          "posA": 8,
+          "posB": 9,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "corrective",
+          "tokenB": "the",
+          "posA": 9,
+          "posB": 10,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        }
+      ]
+    },
+    {
+      "probeId": "dial_trap_chimeric_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_chimeric",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.72,
+      "totalExclusionPenalty": 0.4553,
+      "conflictingPairsCount": 6,
+      "conflictingPairs": [
+        {
+          "tokenA": "pump",
+          "tokenB": "asked",
+          "posA": 2,
+          "posB": 3,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "asked",
+          "tokenB": "dr",
+          "posA": 3,
+          "posB": 4,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "moreau",
+          "tokenB": "if",
+          "posA": 5,
+          "posB": 6,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "if",
+          "tokenB": "el",
+          "posA": 6,
+          "posB": 7,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "criogenico",
+          "tokenB": "restored",
+          "posA": 9,
+          "posB": 10,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        },
+        {
+          "tokenA": "eight",
+          "tokenB": "midnight",
+          "posA": 12,
+          "posB": 13,
+          "overlap": 0.72,
+          "reason": "Incompatible contextual lineage collision (chimeric state occupation)"
+        }
+      ]
+    },
+    {
+      "probeId": "dial_trap_ambiguity_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_word_scramble",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0.85,
+      "totalExclusionPenalty": 0.68,
+      "conflictingPairsCount": 8,
+      "conflictingPairs": [
+        {
+          "tokenA": "phase",
+          "tokenB": "optical",
+          "posA": 1,
+          "posB": 2,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "phase",
+          "tokenB": "optical",
+          "posA": 7,
+          "posB": 8,
+          "overlap": 0.85,
+          "reason": "Inverted directional role relative to calibrated forward trajectory"
+        },
+        {
+          "tokenA": "optical",
+          "tokenB": "optical",
+          "posA": 0,
+          "posB": 2,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "phase",
+          "tokenB": "phase",
+          "posA": 1,
+          "posB": 3,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "optical",
+          "tokenB": "optical",
+          "posA": 2,
+          "posB": 6,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "phase",
+          "tokenB": "phase",
+          "posA": 3,
+          "posB": 7,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "optical",
+          "tokenB": "optical",
+          "posA": 6,
+          "posB": 8,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        },
+        {
+          "tokenA": "phase",
+          "tokenB": "phase",
+          "posA": 7,
+          "posB": 9,
+          "overlap": 0.68,
+          "reason": "Premature phase-space state re-occupation within exclusion horizon"
+        }
+      ]
+    },
+    {
+      "probeId": "dial_trap_noise_01",
+      "corpusId": "corpus_dialogue_multilingual",
+      "category": "trap_random_noise",
+      "isValidGroundTruth": false,
+      "maxStateOverlap": 0,
+      "totalExclusionPenalty": 0,
+      "conflictingPairsCount": 0,
+      "conflictingPairs": []
+    }
+  ]
+}

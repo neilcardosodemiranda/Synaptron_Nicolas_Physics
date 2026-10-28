@@ -1,0 +1,11 @@
+{
+  "capturedAtIso": "2026-10-23T07:22:06.238Z",
+  "baselineFilesSha256": {
+    "src/physics/engine.ts": "7804c3026ae6f94213ac5d101e3b040b3f7e9e6a8d69bc7ee9c50355f57eed11",
+    "src/physics/webgpuEngine.ts": "33095ae2ceb44bf997de69e9eceb5777af30afdd46569747535257206e901909",
+    "src/types/physics.ts": "8a9943f3eebd676aca182bd3a82dd15ef5e872e1fee16859dbf1c43bc532bc1d",
+    "public/assets/aistudio/M87R_UNSEEN_CORPUS_LOCAL_RECALIBRATION_01_REPORT_6f5e1ebd.md": "6f5e1ebd77a45c8bb5cb942aac73f6c9e325b9a982fa45ab5656c885a12d6d7a",
+    "public/assets/aistudio/M87R_SECOND_UNSEEN_CORPUS_RECALIBRATION_01_REPORT_117ac353.md": "117ac353847729950bded281065da9b07056011df7e3aaa1250694ec54f2ec48"
+  },
+  "allBaselineHashesUnchanged": true
+}

@@ -1,0 +1,55 @@
+{
+  "experimentTitle": "Gemini Temporal Multiscale Language Physics",
+  "branchPath": "experiments/gemini_temporal_multiscale_language_physics",
+  "protocol": "TWO_PASS_UNSUPERVISED_CALIBRATION_FROZEN_REPLAY",
+  "corporaTested": [
+    "corpus_narrative_observatory",
+    "corpus_scientific_thermodynamics",
+    "corpus_dialogue_multilingual"
+  ],
+  "conditionsEvaluated": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L"
+  ],
+  "ablationsEvaluated": [
+    "ablation_1_no_offsets",
+    "ablation_2_no_backward",
+    "ablation_3_no_forward_consequence",
+    "ablation_4_no_char_channel",
+    "ablation_5_no_word_channel",
+    "ablation_6_no_cross_scale",
+    "ablation_7_no_pauli",
+    "ablation_8_no_clock",
+    "ablation_9_no_wisdom",
+    "ablation_10_shuffled_time"
+  ],
+  "zeroBaselineModificationVerified": true,
+  "zeroCheatingSourceAuditVerified": true,
+  "conditionCMacroValidRecall": 0.8667,
+  "conditionCMacroTrapRejection": 1,
+  "deterministicReplayParity": 1,
+  "artifactSha256Manifest": {
+    "REPORT.md": "38fedf25773f3b0a7621060a5f75aae2da2b4001edf0a1cdcc7f663daa5f7d33",
+    "telemetry.jsonl": "b3e1d54a3eb59d7833ab007b2e66bb228e58665a23b8ffa939c69ef35ccc061f",
+    "results.json": "3de1a584c82e296b66cc98a076bdc5e0fec7d429c9fced75ca82d58a11c956ba",
+    "ablation_matrix.json": "86e1eced70d8e17362056d87abc635d38af38f0246761eb4e867c539dffaab75",
+    "temporal_clock_analysis.json": "acc3ce7f2f9f3f39ee825f2cf0b04ad4050dca1d9cd01217e0c414ae1cabed88",
+    "backward_forward_consistency.json": "4bd1051cf449c313c8665f51595149a9244297d4242b7f00e2b45179bf5cf6f1",
+    "multiview_stability.json": "cabef27d80d2f0b0b4862ec952a46b360e774db2acac53689b40cddd17d550eb",
+    "orthogonality_analysis.json": "de4e48c746ca452237e3630fcd2483777562ed7ee4a9c18ab8c2387ead58d371",
+    "source_audit.json": "301b51f232c352c1e4959228335f1bc21f3fca5f3e694cfab12cd3e7c1b4b899",
+    "integrity_pre.json": "effd02f5617400ac255ce861f8270586cdbba581b726a75f17f65fecafdebd1c",
+    "integrity_post.json": "88fad23f1155fe3153201c134565785070afb3641838451c5c4cd613b80238eb"
+  },
+  "sealedAtIso": "2026-10-23T07:22:06.243Z"
+}

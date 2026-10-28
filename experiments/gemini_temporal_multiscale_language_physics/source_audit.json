@@ -1,0 +1,23 @@
+{
+  "scannedFiles": 11,
+  "prohibitedPatternsChecked": [
+    "LLM SDK (@google/genai / openai)",
+    "External NLP / POS Tagger (compromise / natural / wink)",
+    "Hardcoded Stopword / Pronoun List"
+  ],
+  "violationsFound": 0,
+  "fileHashes": {
+    "experiments/gemini_temporal_multiscale_language_physics/src/benchmarkSuite.ts": "6952757d8e9f04c2ce467b2c49e7234110ff56eadb6d3a337bc0437dcd898d0e",
+    "experiments/gemini_temporal_multiscale_language_physics/src/bidirectionalField.ts": "2573657f55389752a021913f03849a2fdab6e33a13e49c81769f4edcf920801a",
+    "experiments/gemini_temporal_multiscale_language_physics/src/charChannel.ts": "1effab74c87b163ce150aa810dabb18810570fc009ed025ac415a0fe986ab182",
+    "experiments/gemini_temporal_multiscale_language_physics/src/corpora.ts": "31e1328ce41c0fb5a0cf65e77d5373289c26c8590cd1439e2157d2448a4b1be7",
+    "experiments/gemini_temporal_multiscale_language_physics/src/engine.ts": "b17b5d908088a75312c87b348956cecb89206792cfc46e704dd418a5bcd5a149",
+    "experiments/gemini_temporal_multiscale_language_physics/src/multiview.ts": "8924b07d50b7cb5ac78d61c413d7efe1a1fd5cf54828751f0d04c709b192e45c",
+    "experiments/gemini_temporal_multiscale_language_physics/src/pauliOrthogonality.ts": "274741246e2e58de04a0a91be2a16d223e23c46c0d8829e2c06e8540a1ab35f9",
+    "experiments/gemini_temporal_multiscale_language_physics/src/temporalClock.ts": "cd1f9d0fea67c78d308f12cabb3cf2e9d557030dc09f8b8f1ba0b2ba050b6af9",
+    "experiments/gemini_temporal_multiscale_language_physics/src/types.ts": "46de56f56664726cabf10ef7debcf742289af6a2ae4ac9caa3896115c2689b6d",
+    "experiments/gemini_temporal_multiscale_language_physics/src/wisdomStability.ts": "1f07b71e7230372e0c8d3814c1b666abab7efca435b415eaad2940b046da34e9",
+    "experiments/gemini_temporal_multiscale_language_physics/src/wordChannel.ts": "55fc499cb920ebfb2bbd10a531996503fc797a5c8c77055d4e370c1cfc4836ec"
+  },
+  "status": "CLEAN_ZERO_CHEATING"
+}

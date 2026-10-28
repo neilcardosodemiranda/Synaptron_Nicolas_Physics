@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Ignore WebSocket / HMR connection errors per environment constraints
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event.reason;
+        var msg = reason ? (reason.message || String(reason)) : '';
+        var stack = reason ? (reason.stack || '') : '';
+        if (
+          msg.includes('WebSocket') ||
+          msg.includes('ws') ||
+          stack.includes('@vite/client') ||
+          stack.includes('client.mjs')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = event.message || '';
+        var filename = event.filename || '';
+        var stack = (event.error && event.error.stack) || '';
+        if (
+          msg.includes('WebSocket') ||
+          filename.includes('@vite/client') ||
+          stack.includes('@vite/client') ||
+          filename.includes('client.mjs')
+        ) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      });
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synaptron: Neuromorphic Particle Computer</title>
+    <meta name="description" content="Interactive neuromorphic computer simulating linguistic particle physics where letters and words behave as relativistic particles, quarks, and hadrons mediated by spiking synaptic fields." />
+    <meta property="og:title" content="Synaptron: Neuromorphic Particle Computer" />
+    <meta property="og:description" content="Interactive neuromorphic computer simulating linguistic particle physics where letters and words behave as relativistic particles, quarks, and hadrons mediated by spiking synaptic fields." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
