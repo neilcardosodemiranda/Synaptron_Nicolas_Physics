@@ -64,6 +64,7 @@ import {
   Sun,
   Brain,
   History,
+  ShieldCheck,
 } from 'lucide-react';
 
 interface GutenbergCatalogBook {
@@ -1591,92 +1592,132 @@ export const BareMetalCrossbarConsole: React.FC<BareMetalCrossbarConsoleProps> =
                     </div>
                   )}
 
-                  {/* 3-Tier Deep Cortical Crossbar Hierarchy & Equilibrium Settling */}
+                  {/* 6-Layer Time-Shifted Crossbar Architecture & Harmonic Decoupling */}
                   {synthesisResult.bicameral.deepCorticalHierarchy && (
-                    <div className="bg-gradient-to-r from-sky-950/40 via-slate-900/90 to-emerald-950/40 border border-sky-500/40 rounded-lg p-3 font-mono text-[10px] space-y-2.5">
-                      <div className="flex items-center justify-between text-sky-300 font-bold border-b border-sky-900/50 pb-1.5">
-                        <span className="flex items-center gap-1.5">
+                    <div className="bg-gradient-to-r from-sky-950/50 via-slate-900/95 to-indigo-950/50 border border-sky-500/40 rounded-lg p-3 font-mono text-[10px] space-y-3">
+                      {/* Header & Global Phase Synchrony Badges */}
+                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 border-b border-sky-900/50 pb-2">
+                        <div className="flex items-center gap-2 text-sky-300 font-bold">
                           <Layers className="w-4 h-4 text-sky-400" />
-                          3-TIER DEEP CORTICAL CROSSBAR HIERARCHY &amp; EQUILIBRIUM RELAXATION
-                        </span>
-                        <div className="flex items-center gap-2">
+                          <span className="tracking-wide">6-LAYER TIME-SHIFTED CROSSBAR ARCHITECTURE (M87R SYNTHESIS)</span>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-1.5">
+                          <span className={`text-[9px] px-2 py-0.5 rounded border font-semibold ${
+                            synthesisResult.bicameral.deepCorticalHierarchy.isPhaseLocked
+                              ? 'bg-emerald-950/80 border-emerald-500/60 text-emerald-300 animate-pulse'
+                              : 'bg-amber-950/80 border-amber-500/60 text-amber-300'
+                          }`}>
+                            Φ̄ = {synthesisResult.bicameral.deepCorticalHierarchy.globalPhaseSynchrony.toFixed(3)} {synthesisResult.bicameral.deepCorticalHierarchy.isPhaseLocked ? '[PHASE-LOCKED]' : '[RELAXING]'}
+                          </span>
                           <span className="text-[9px] bg-sky-950/80 px-2 py-0.5 rounded border border-sky-600/40 text-sky-300">
                             {synthesisResult.bicameral.deepCorticalHierarchy.settlingDurationUs} μs Settling
                           </span>
-                          <span className="text-[9px] bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-600/40 text-emerald-300">
-                            {synthesisResult.bicameral.deepCorticalHierarchy.relaxationCycles} Relaxation Cycles (ΔE={synthesisResult.bicameral.deepCorticalHierarchy.lyapunovDeltaE} mV)
+                          <span className="text-[9px] bg-slate-950/80 px-2 py-0.5 rounded border border-slate-700/60 text-slate-300">
+                            {synthesisResult.bicameral.deepCorticalHierarchy.relaxationCycles} Cycles (ΔE={synthesisResult.bicameral.deepCorticalHierarchy.lyapunovDeltaE} mV)
                           </span>
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                        {/* Layer 1: Lexical Surface */}
-                        <div className="bg-slate-950/80 border border-slate-800 rounded p-2 space-y-1.5">
-                          <div className="flex items-center justify-between text-[9px] font-bold text-slate-300 border-b border-slate-800/80 pb-1">
-                            <span className="text-sky-400">LAYER 1: LEXICAL 8H CROSSBAR</span>
-                            <span className="text-emerald-400">{synthesisResult.bicameral.deepCorticalHierarchy.layers.l1Lexical.conductanceFluxUa} μA</span>
-                          </div>
-                          <div className="text-[9px] text-slate-400">
-                            65,536 Surface Somas · Delay Horizons V₀..V₇
-                          </div>
-                          <div className="text-[9px] text-slate-300 flex items-center justify-between">
-                            <span>Active Somas:</span>
-                            <span className="font-bold text-sky-300">{synthesisResult.bicameral.deepCorticalHierarchy.layers.l1Lexical.activeSomasCount}</span>
-                          </div>
-                          <div className="flex flex-wrap gap-1 pt-1">
-                            {synthesisResult.bicameral.deepCorticalHierarchy.layers.l1Lexical.dominantClusters.map((dc, i) => (
-                              <span key={i} className="px-1.5 py-0.5 rounded bg-sky-950/70 border border-sky-800/50 text-[8px] text-sky-200">
-                                {dc.name} ({dc.energyMv} mV)
-                              </span>
-                            ))}
-                          </div>
+                      {/* Two-Stage Decoupled Top-Down Feedback Bus Status */}
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-[9px] bg-slate-950/80 p-1.5 rounded border border-slate-800">
+                        <div className="flex items-center justify-between px-2 py-1 rounded bg-sky-950/40 border border-sky-800/40">
+                          <span className="text-sky-300">Stage 1 Feedback (L₂ → L₁):</span>
+                          <span className="font-bold text-sky-400 font-mono">+{synthesisResult.bicameral.deepCorticalHierarchy.stage1FeedbackFluxUa} μA</span>
                         </div>
-
-                        {/* Layer 2: Cortical Concept Columns */}
-                        <div className="bg-slate-950/80 border border-indigo-900/60 rounded p-2 space-y-1.5">
-                          <div className="flex items-center justify-between text-[9px] font-bold text-indigo-300 border-b border-indigo-900/50 pb-1">
-                            <span className="text-indigo-400">LAYER 2: CONCEPT COLUMNS</span>
-                            <span className="text-emerald-400">{synthesisResult.bicameral.deepCorticalHierarchy.layers.l2ConceptColumns.conductanceFluxUa} μA</span>
-                          </div>
-                          <div className="text-[9px] text-slate-400">
-                            12 Invariant Cognitive Attractor Basins
-                          </div>
-                          <div className="text-[9px] text-indigo-200 font-semibold truncate">
-                            Winner: <span className="text-amber-300">{synthesisResult.bicameral.deepCorticalHierarchy.winningConcept}</span>
-                          </div>
-                          <div className="space-y-1 pt-0.5">
-                            {synthesisResult.bicameral.deepCorticalHierarchy.layers.l2ConceptColumns.dominantClusters.map((dc, i) => (
-                              <div key={i} className="flex items-center justify-between text-[8px] text-slate-300">
-                                <span className="truncate max-w-[120px]">{dc.name}</span>
-                                <span className="font-bold text-indigo-400">{dc.energyMv} mV</span>
-                              </div>
-                            ))}
-                          </div>
+                        <div className="flex items-center justify-between px-2 py-1 rounded bg-indigo-950/40 border border-indigo-800/40">
+                          <span className="text-indigo-300">Cross-Stage Bridge (L₂ ↔ L₃):</span>
+                          <span className="font-bold text-indigo-400 font-mono">+{synthesisResult.bicameral.deepCorticalHierarchy.crossStageCouplingUa} μA</span>
                         </div>
+                        <div className="flex items-center justify-between px-2 py-1 rounded bg-emerald-950/40 border border-emerald-800/40">
+                          <span className="text-emerald-300">Stage 2 Feedback (L₆ → L₅ → L₄ → L₃):</span>
+                          <span className="font-bold text-emerald-400 font-mono">+{synthesisResult.bicameral.deepCorticalHierarchy.stage2FeedbackFluxUa} μA</span>
+                        </div>
+                      </div>
 
-                        {/* Layer 3: Macro-Cortical Emission */}
-                        <div className="bg-slate-950/80 border border-emerald-900/60 rounded p-2 space-y-1.5">
-                          <div className="flex items-center justify-between text-[9px] font-bold text-emerald-300 border-b border-emerald-900/50 pb-1">
-                            <span className="text-emerald-400">LAYER 3: GENERATIVE EMISSION</span>
-                            <span className="text-emerald-400">Feedback: {synthesisResult.bicameral.deepCorticalHierarchy.recurrentFeedbackCurrentUa} μA</span>
-                          </div>
-                          <div className="text-[9px] text-slate-400">
-                            N1..N8 Macro-Cortical Grounded Emission
-                          </div>
-                          <div className="text-[9px] text-emerald-200 flex items-center justify-between">
-                            <span>Equilibrium State:</span>
-                            <span className="font-bold text-emerald-300">
-                              {synthesisResult.bicameral.deepCorticalHierarchy.isEquilibriumReached ? '✓ CONVERGED' : 'RELAXING'}
+                      {/* Pre-Verbalization Immutable Semantic Frame Lock */}
+                      {synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock && (
+                        <div className="bg-gradient-to-r from-emerald-950/30 via-slate-950/90 to-teal-950/30 border border-emerald-500/40 rounded p-2 text-[9px] space-y-1">
+                          <div className="flex items-center justify-between font-bold text-emerald-300">
+                            <span className="flex items-center gap-1.5">
+                              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                              PRE-VERBALIZATION IMMUTABLE SEMANTIC FRAME LOCK ℱ_source
+                            </span>
+                            <span className="bg-emerald-900/60 border border-emerald-500/50 px-2 py-0.5 rounded text-[8px] text-emerald-200">
+                              [GROUNDED 1.000 PRESERVATION · ZERO DRIFT]
                             </span>
                           </div>
-                          <div className="flex flex-wrap gap-1 pt-1">
-                            {synthesisResult.bicameral.deepCorticalHierarchy.layers.l3Generative.dominantClusters.map((dc, i) => (
-                              <span key={i} className="px-1.5 py-0.5 rounded bg-emerald-950/70 border border-emerald-800/50 text-[8px] text-emerald-200">
-                                {dc.name}
-                              </span>
-                            ))}
+                          <div className="text-slate-300 font-mono text-[8px] break-all bg-black/40 px-2 py-1 rounded border border-emerald-900/40">
+                            {synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock.rawTupleString}
+                          </div>
+                          <div className="flex flex-wrap items-center gap-2 pt-0.5 text-[8px] text-slate-400">
+                            <span>Subject: <strong className="text-emerald-300">{synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock.subject || '—'}</strong></span>
+                            <span>Predicate: <strong className="text-sky-300">{synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock.predicate || '—'}</strong></span>
+                            <span>Provenance: <strong className="text-amber-300">{synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock.provenanceId}</strong></span>
+                            <span>Negation Invariant: <strong className={synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock.negation ? 'text-rose-400' : 'text-emerald-400'}>{synthesisResult.bicameral.deepCorticalHierarchy.semanticFrameLock.negation ? 'TRUE' : 'FALSE'}</strong></span>
                           </div>
                         </div>
+                      )}
+
+                      {/* 6-Layer Multi-Scale Harmonic Crossbar Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                        {synthesisResult.bicameral.deepCorticalHierarchy.sixLayers?.map((layer) => (
+                          <div
+                            key={layer.layerIndex}
+                            className="bg-slate-950/90 border border-slate-800 hover:border-sky-500/50 transition-colors rounded p-2.5 space-y-1.5 flex flex-col justify-between"
+                          >
+                            <div>
+                              <div className="flex items-center justify-between text-[9px] font-bold border-b border-slate-800/80 pb-1">
+                                <span className={
+                                  layer.layerIndex === 1 ? 'text-sky-400' :
+                                  layer.layerIndex === 2 ? 'text-indigo-400' :
+                                  layer.layerIndex === 3 ? 'text-cyan-400' :
+                                  layer.layerIndex === 4 ? 'text-amber-400' :
+                                  layer.layerIndex === 5 ? 'text-purple-400' :
+                                  'text-emerald-400'
+                                }>
+                                  L{layer.layerIndex}: {layer.name.split(':')[1]?.trim() || layer.name}
+                                </span>
+                                <span className="font-mono text-emerald-400 text-[8px]">
+                                  V={layer.membranePotentialV.toFixed(2)}V
+                                </span>
+                              </div>
+
+                              <div className="text-[8px] text-slate-400 line-clamp-2 mt-1 leading-snug">
+                                {layer.functionalRole}
+                              </div>
+
+                              <div className="grid grid-cols-3 gap-1 pt-1.5 text-[8px] font-mono text-slate-300">
+                                <div className="bg-slate-900 px-1 py-0.5 rounded text-center">
+                                  <div className="text-slate-500 text-[7px]">HORIZON</div>
+                                  <div className="text-sky-300 font-bold">Δ={layer.horizonDelta}</div>
+                                </div>
+                                <div className="bg-slate-900 px-1 py-0.5 rounded text-center">
+                                  <div className="text-slate-500 text-[7px]">LEAK</div>
+                                  <div className="text-amber-300 font-bold">λ={layer.leakLambda}</div>
+                                </div>
+                                <div className="bg-slate-900 px-1 py-0.5 rounded text-center">
+                                  <div className="text-slate-500 text-[7px]">PHASE</div>
+                                  <div className="text-emerald-300 font-bold">θ={layer.phaseThetaLabel}</div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="space-y-1 pt-1.5 border-t border-slate-800/60 mt-1">
+                              <div className="flex items-center justify-between text-[8px] text-slate-400">
+                                <span>Forward: <strong className="text-sky-400 font-mono">+{layer.conductanceFluxUa} μA</strong></span>
+                                <span>Feedback: <strong className="text-indigo-400 font-mono">+{layer.feedbackFluxUa} μA</strong></span>
+                              </div>
+                              <div className="flex flex-wrap gap-1">
+                                {layer.dominantClusters.map((dc, i) => (
+                                  <span key={i} className="px-1.5 py-0.2 rounded bg-slate-900 border border-slate-700/60 text-[7px] text-slate-200">
+                                    {dc.name} ({dc.energyMv} mV)
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
 
                         {/* Law 1: Information Flow Over Time - Temporal Phasing Pipeline */}
                         {synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing && (
@@ -1747,8 +1788,7 @@ export const BareMetalCrossbarConsole: React.FC<BareMetalCrossbarConsoleProps> =
                           </div>
                         )}
                       </div>
-                    </div>
-                  )}
+                    )}
                 </div>
               )}
 

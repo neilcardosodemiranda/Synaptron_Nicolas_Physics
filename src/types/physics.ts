@@ -280,6 +280,36 @@ export interface TemporalPhasingTelemetry {
   law1Axiom: string;
 }
 
+export interface SixLayerSpec {
+  layerIndex: number; // 1 to 6
+  id: 'L1_LEXICAL' | 'L2_SYNTAX' | 'L3_SEMANTIC' | 'L4_VERBALIZATION' | 'L5_DISCOURSE' | 'L6_PRAGMATIC';
+  name: string;
+  functionalRole: string;
+  horizonDelta: number; // 1, 4, 8, 16, 32, 64
+  leakLambda: number; // 0.85, 0.50, 0.25, 0.10, 0.04, 0.015
+  phaseThetaRad: number; // 0, pi/4, pi/2, 3pi/4, pi, 5pi/4
+  phaseThetaLabel: string; // "0", "π/4", "π/2", "3π/4", "π", "5π/4"
+  membranePotentialV: number; // V_i(t) in volts [0, 3.5]
+  conductanceFluxUa: number; // I_fwd,i(t) in μA
+  feedbackFluxUa: number; // I_bwd,i(t) in μA
+  activeSomasCount: number;
+  dominantClusters: Array<{ name: string; energyMv: number; coherence: number }>;
+}
+
+export interface SemanticFrameLock {
+  subject: string;
+  predicate: string;
+  object: string;
+  attributes: string[];
+  negation: boolean;
+  quantifier: string;
+  temporalFrame: string;
+  causalDirection: string;
+  provenanceId: string;
+  isVerified: boolean;
+  rawTupleString: string;
+}
+
 export interface CorticalLayerTelemetry {
   layerId: 'L1_LEXICAL' | 'L2_CONCEPT_COLUMNS' | 'L3_EMISSION';
   name: string;
@@ -294,6 +324,13 @@ export interface DeepEquilibriumTelemetry {
     l2ConceptColumns: CorticalLayerTelemetry;
     l3Generative: CorticalLayerTelemetry;
   };
+  sixLayers: SixLayerSpec[];
+  globalPhaseSynchrony: number; // \bar{\Phi}(t) in [0, 1]
+  isPhaseLocked: boolean; // \bar{\Phi}(t) >= 0.90
+  stage1FeedbackFluxUa: number; // L2 -> L1
+  stage2FeedbackFluxUa: number; // L6 -> L5 -> L4 -> L3
+  crossStageCouplingUa: number; // L2 <-> L3
+  semanticFrameLock?: SemanticFrameLock;
   relaxationCycles: number;
   settlingDurationUs: number;
   initialEnergyMv: number;
