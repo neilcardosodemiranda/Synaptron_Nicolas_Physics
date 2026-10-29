@@ -38,6 +38,8 @@ export interface QaStreamProgress {
   newSynapses: number;
   vocabSize: number;
   tokensPerSec: number;
+  potentiatedSynapses?: number;
+  deepLayerTransitions?: number;
 }
 
 export const QA_DATASET_CATALOG: QaDatasetMeta[] = [

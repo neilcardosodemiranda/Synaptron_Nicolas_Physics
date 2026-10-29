@@ -1677,6 +1677,75 @@ export const BareMetalCrossbarConsole: React.FC<BareMetalCrossbarConsoleProps> =
                             ))}
                           </div>
                         </div>
+
+                        {/* Law 1: Information Flow Over Time - Temporal Phasing Pipeline */}
+                        {synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing && (
+                          <div className="col-span-1 md:col-span-3 bg-slate-950/95 border border-amber-500/40 rounded-lg p-2.5 space-y-2 mt-1">
+                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-amber-900/40 pb-1.5">
+                              <div className="flex items-center gap-1.5 text-amber-300 font-bold text-[10px]">
+                                <Clock className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+                                <span>LAW 1: INFORMATION FLOW OVER TIME (TEMPORAL PHASING PIPELINE)</span>
+                              </div>
+                              <span className="text-[9px] text-amber-400/90 bg-amber-950/80 px-2 py-0.5 rounded border border-amber-700/50">
+                                Δt = {synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing.baseDeltaTUs} μs · 4 Temporal Stages Phased
+                              </span>
+                            </div>
+
+                            <div className="text-[9px] text-slate-300 italic bg-amber-950/20 px-2 py-1 rounded border border-amber-900/30">
+                              &ldquo;{synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing.law1Axiom}&rdquo;
+                            </div>
+
+                            {/* Phased Input Word Events Wavefront */}
+                            {synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing.phasedWordEvents.length > 0 && (
+                              <div className="space-y-1">
+                                <div className="text-[9px] text-slate-400 font-semibold uppercase flex items-center justify-between">
+                                  <span>Phased Word Event Wavefront [w₀(t), w₁(t - Δt), ..., w₇(t - 7Δt)]:</span>
+                                  <span className="text-amber-400">Delay Horizons V₀..V₇</span>
+                                </div>
+                                <div className="flex flex-wrap gap-1.5">
+                                  {synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing.phasedWordEvents.map((pe, idx) => (
+                                    <div
+                                      key={idx}
+                                      className="flex items-center gap-1 px-2 py-1 rounded bg-slate-900 border border-amber-600/40 text-[9px]"
+                                    >
+                                      <span className="font-bold text-amber-300 font-mono">{pe.phaseLabel}</span>
+                                      <span className="text-white font-semibold">&ldquo;{pe.word}&rdquo;</span>
+                                      <span className="text-slate-400 text-[8px]">({pe.horizon})</span>
+                                      <span className="text-emerald-400 font-mono text-[8px]">+{pe.voltageMv}mV</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                            {/* 4 Phased Stages Pipeline Grid */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1.5 pt-1">
+                              {synthesisResult.bicameral.deepCorticalHierarchy.temporalPhasing.stages.map((st, sIdx) => (
+                                <div
+                                  key={sIdx}
+                                  className="bg-slate-900/80 border border-slate-800 rounded p-1.5 space-y-1 flex flex-col justify-between"
+                                >
+                                  <div>
+                                    <div className="flex items-center justify-between text-[8px] font-bold text-amber-300">
+                                      <span className="truncate">{st.name.split(':')[0]}</span>
+                                      <span className="text-emerald-400">{st.elapsedUs} μs</span>
+                                    </div>
+                                    <div className="text-[9px] text-white font-semibold truncate mt-0.5">
+                                      {st.timeOffsetLabel}
+                                    </div>
+                                    <div className="text-[8px] text-slate-400 leading-tight mt-1 line-clamp-2">
+                                      {st.description}
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center justify-between text-[8px] pt-1 border-t border-slate-800/60 mt-1">
+                                    <span className="text-emerald-400 font-mono">{st.energyFluxUa} μA flux</span>
+                                    <span className="text-slate-400 text-[7px] truncate max-w-[80px]">{st.status.split(' ')[0]}</span>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
                   )}

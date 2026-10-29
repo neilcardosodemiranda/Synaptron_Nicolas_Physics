@@ -253,6 +253,33 @@ export interface CorpusCallosumReport {
   final_output: null; // STRICT INVARIANT: Comparison bus only, NEVER emits final user output
 }
 
+export interface TemporalWordPhaseEvent {
+  word: string;
+  delayIndex: number;
+  phaseLabel: string; // e.g. "w₀(t)", "w₁(t - Δt)"
+  horizon: string; // "V₀", "V₁", ..., "V₇"
+  voltageMv: number;
+  conductanceUa: number;
+}
+
+export interface TemporalPhaseStage {
+  stageId: 'FEEDFORWARD_INJECTION' | 'RECURRENT_RELAXATION' | 'TOP_DOWN_FEEDBACK' | 'GENERATIVE_ASSEMBLY';
+  name: string;
+  timeOffsetLabel: string; // e.g. "t₀", "t₀ + kΔt", "t_settled", "t_emit"
+  elapsedUs: number;
+  energyFluxUa: number;
+  status: string;
+  description: string;
+}
+
+export interface TemporalPhasingTelemetry {
+  isPhasingActive: boolean;
+  baseDeltaTUs: number; // base time increment Δt in microseconds
+  stages: TemporalPhaseStage[];
+  phasedWordEvents: TemporalWordPhaseEvent[];
+  law1Axiom: string;
+}
+
 export interface CorticalLayerTelemetry {
   layerId: 'L1_LEXICAL' | 'L2_CONCEPT_COLUMNS' | 'L3_EMISSION';
   name: string;
@@ -275,6 +302,7 @@ export interface DeepEquilibriumTelemetry {
   recurrentFeedbackCurrentUa: number;
   isEquilibriumReached: boolean;
   winningConcept: string;
+  temporalPhasing: TemporalPhasingTelemetry;
 }
 
 export interface FrontalLobeDecision {

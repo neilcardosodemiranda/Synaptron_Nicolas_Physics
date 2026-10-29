@@ -1201,7 +1201,7 @@ async function startServer() {
       try {
         const rawJson = fs.readFileSync(localCachePath, 'utf8');
         const parsed = JSON.parse(rawJson) as QaPair[];
-        if (Array.isArray(parsed) && parsed.length > 0) {
+        if (Array.isArray(parsed) && parsed.length >= 10000) {
           if (parsed[0].sourceDataset === datasetId) {
             qaDatasetCache.set(datasetId, parsed);
             return parsed;
@@ -1216,7 +1216,7 @@ async function startServer() {
       const pairs = generateParametricEePhysicsDataset();
       qaDatasetCache.set(datasetId, pairs);
       try {
-        fs.writeFileSync(localCachePath, JSON.stringify(pairs.slice(0, 5000)));
+        fs.writeFileSync(localCachePath, JSON.stringify(pairs));
       } catch {
         // Ignore cache write error
       }
@@ -1227,7 +1227,7 @@ async function startServer() {
       const pairs = generateOpenAssistantDataset();
       qaDatasetCache.set(datasetId, pairs);
       try {
-        fs.writeFileSync(localCachePath, JSON.stringify(pairs.slice(0, 5000)));
+        fs.writeFileSync(localCachePath, JSON.stringify(pairs));
       } catch {
         // Ignore cache write error
       }
@@ -1238,7 +1238,7 @@ async function startServer() {
       const pairs = generateScienceStemDataset();
       qaDatasetCache.set(datasetId, pairs);
       try {
-        fs.writeFileSync(localCachePath, JSON.stringify(pairs.slice(0, 5000)));
+        fs.writeFileSync(localCachePath, JSON.stringify(pairs));
       } catch {
         // Ignore cache write error
       }
@@ -1249,7 +1249,7 @@ async function startServer() {
       const pairs = generatePhilosophyMindDataset();
       qaDatasetCache.set(datasetId, pairs);
       try {
-        fs.writeFileSync(localCachePath, JSON.stringify(pairs.slice(0, 5000)));
+        fs.writeFileSync(localCachePath, JSON.stringify(pairs));
       } catch {
         // Ignore cache write error
       }
@@ -1260,7 +1260,7 @@ async function startServer() {
       const pairs = generateCodingDataset(datasetId);
       qaDatasetCache.set(datasetId, pairs);
       try {
-        fs.writeFileSync(localCachePath, JSON.stringify(pairs.slice(0, 5000)));
+        fs.writeFileSync(localCachePath, JSON.stringify(pairs));
       } catch {
         // Ignore cache write error
       }
@@ -1423,14 +1423,32 @@ async function startServer() {
 
     try {
       const allPairs = await loadQaDataset(datasetId);
-      const slice = allPairs.slice(offset, offset + limit);
+      if (!allPairs || allPairs.length === 0) {
+        return res.json({
+          datasetId,
+          totalPairs: 0,
+          offset,
+          limit,
+          count: 0,
+          hasMore: false,
+          pairs: [],
+        });
+      }
+
+      const effectiveOffset = offset % allPairs.length;
+      let slice = allPairs.slice(effectiveOffset, effectiveOffset + limit);
+      if (slice.length < limit && allPairs.length > slice.length) {
+        const needed = limit - slice.length;
+        slice = slice.concat(allPairs.slice(0, Math.min(needed, allPairs.length)));
+      }
+
       return res.json({
         datasetId,
         totalPairs: allPairs.length,
         offset,
         limit,
         count: slice.length,
-        hasMore: offset + limit < allPairs.length,
+        hasMore: true,
         pairs: slice,
       });
     } catch (err: unknown) {

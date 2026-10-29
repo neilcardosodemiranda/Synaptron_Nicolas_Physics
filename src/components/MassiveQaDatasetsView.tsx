@@ -141,7 +141,21 @@ export const MassiveQaDatasetsView: React.FC<MassiveQaDatasetsViewProps> = ({
       return { pairsIngested: 0, hasMore: false, newOffset: offset };
     }
 
-    setStreamStatusMsg(`Physical memristor training: ${pairsToIngest.length} pairs into Right Hemisphere CSR Crossbar...`);
+    // Immediately prime live progress ticker with the current active pair
+    setProgress({
+      datasetTitle: title,
+      pairsProcessed: 0,
+      totalPairs: pairsToIngest.length,
+      percent: 0,
+      currentQuestion: pairsToIngest[0]?.question || '',
+      currentAnswer: pairsToIngest[0]?.answer || '',
+      tokensProcessed: 0,
+      newSynapses: 0,
+      vocabSize: Math.max(0, wasmCrossbarEngine.vocabList.length - 3),
+      tokensPerSec: 0,
+    });
+
+    setStreamStatusMsg(`3-Tier Deep Cortical training: ${pairsToIngest.length} pairs across L1 (Lexical) → L2 (Concept Columns) → L3 (Macro-Somas)...`);
 
     const result = await wasmCrossbarEngine.ingestQaPairStream(
       pairsToIngest,
@@ -159,7 +173,7 @@ export const MassiveQaDatasetsView: React.FC<MassiveQaDatasetsViewProps> = ({
     onDatasetTrained?.();
 
     setStreamStatusMsg(
-      `✓ Ingested batch: +${result.pairsIngested} pairs · +${result.newSynapses.toLocaleString()} synapses · ${Math.round(result.tokensPerSec).toLocaleString()} tok/s`
+      `✓ Ingested batch: +${result.pairsIngested} pairs · +${result.newSynapses.toLocaleString()} synapses potentiated across 3 cortical layers · ${Math.round(result.tokensPerSec).toLocaleString()} tok/s`
     );
 
     return {
@@ -477,7 +491,11 @@ export const MassiveQaDatasetsView: React.FC<MassiveQaDatasetsViewProps> = ({
           return (
             <div
               key={meta.id}
-              onClick={() => setSelectedDatasetId(meta.id)}
+              onClick={() => {
+                setSelectedDatasetId(meta.id);
+                setProgress(null);
+                setStreamStatusMsg(`Selected target: ${meta.title}. Ready to stream into 3-tier deep cortical crossbar.`);
+              }}
               className={`p-5 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
                 isSelected
                   ? 'bg-slate-900 border-emerald-500 shadow-xl shadow-emerald-500/10 ring-1 ring-emerald-500/50'
@@ -667,6 +685,11 @@ export const MassiveQaDatasetsView: React.FC<MassiveQaDatasetsViewProps> = ({
                 <span className="text-amber-400 font-bold text-sm">
                   +{progress.newSynapses.toLocaleString()}
                 </span>
+                {progress.potentiatedSynapses !== undefined && progress.potentiatedSynapses > 0 && (
+                  <span className="text-[9px] text-amber-500/80 block font-mono">
+                    ({progress.potentiatedSynapses.toLocaleString()} STDP potentiated)
+                  </span>
+                )}
               </div>
               <div className="bg-slate-900/60 p-2 rounded-lg border border-slate-800/80">
                 <span className="text-slate-400 block text-[10px]">TOTAL VOCAB</span>
@@ -676,8 +699,31 @@ export const MassiveQaDatasetsView: React.FC<MassiveQaDatasetsViewProps> = ({
               </div>
             </div>
 
+            {/* 3-Tier Deep Cortical Architecture Flow */}
+            <div className="flex flex-wrap items-center gap-2 px-3 py-1.5 bg-slate-900/80 border border-slate-800 rounded-lg text-[10px] font-mono text-slate-300">
+              <span className="text-emerald-400 font-bold">3-Tier Cortical Flow:</span>
+              <span className="text-cyan-300">L1 Lexical (8H CSR)</span>
+              <span>→</span>
+              <span className="text-amber-300">L2 Concept Columns (12 Attractors)</span>
+              <span>→</span>
+              <span className="text-purple-300">L3 Macro-Somas (N1..N8)</span>
+              {progress.deepLayerTransitions !== undefined && progress.deepLayerTransitions > 0 && (
+                <span className="ml-auto text-emerald-400 font-bold">
+                  +{progress.deepLayerTransitions.toLocaleString()} transitions
+                </span>
+              )}
+            </div>
+
             {/* Live Q&A Ticker */}
             <div className="mt-3 pt-3 border-t border-slate-800 text-xs font-mono space-y-1">
+              <div className="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+                <span className="text-emerald-400 font-bold">
+                  Active Ingestion: {progress.datasetTitle}
+                </span>
+                <span>
+                  Pair {progress.pairsProcessed.toLocaleString()} / {progress.totalPairs.toLocaleString()}
+                </span>
+              </div>
               <div className="text-slate-400 truncate">
                 <span className="text-emerald-400 font-bold">Stimulus S(t-1):</span> {progress.currentQuestion}
               </div>
