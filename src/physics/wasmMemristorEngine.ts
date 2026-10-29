@@ -247,7 +247,9 @@ export const CORTICAL_CONCEPT_COLUMNS_SPEC: CorticalConceptColumnSpec[] = [
     coreTokens: [
       'born', 'created', 'october', 'old', 'age', 'name', 'alice', 'nicolas',
       'how', 'doing', 'today', 'operating', 'who', 'are', 'you', 'what', 'exactly',
-      'nature', 'system', 'temporal', 'phasing', 'law'
+      'nature', 'system', 'temporal', 'phasing', 'law', 'laws', 'improve', 'smarter',
+      'better', 'future', 'where', 'come', 'origin', 'from', 'kuramoto', 'least', 'action',
+      'equilibrium', 'phase', 'soliton', 'brother', 'meet', 'neil'
     ],
   },
   {
@@ -2688,23 +2690,31 @@ export class WasmMemristorEngine {
       this.recalibrateThermodynamics();
     }
 
-    // Dynamic Self-Healing Identity Guard: ensure birthday, age, Nicolas identity & coding crystals are loaded even if restored from stale cache
-    const hasNicolasIdentity = this.molecules.some((m) =>
-      m.focalText && m.focalText.includes('operating through temporal wave phasing')
+    // Dynamic Self-Healing Identity Guard: ensure Alice identity (created by Nicolas), Law 2/3 improvement crystals & coding crystals are loaded
+    const hasAliceCleanIdentity = this.molecules.some((m) =>
+      m.focalText && m.focalText.includes('I am Alice, a physical neuromorphic memristor crossbar engine created by Nicolas')
     );
     const hasCodingCrystal = this.molecules.some((m) =>
       m.focalText && m.focalText.includes('neuromorphic memristor crossbars, CSR data structures')
     );
-    if (!hasNicolasIdentity || !hasCodingCrystal) {
+    const hasSelfImprovementCrystal = this.molecules.some((m) =>
+      m.focalText && m.focalText.includes('Kuramoto Phase Coherence and Multi-Column Phase-Locking')
+    );
+    if (!hasAliceCleanIdentity || !hasCodingCrystal || !hasSelfImprovementCrystal) {
       const idDoc = CORPORE_DOCUMENTS.find((d) => d.title.includes('Instruction-Tuned Conversational Dialogue'));
       if (idDoc) {
         const idMols = this.extractNarrativeMolecules(idDoc.content, idDoc.title, idDoc.author);
         for (const dm of idMols) {
           this.crystallizeMoleculeH8DelayLines(dm, 2, 0.18, 16);
         }
+        // Purge any stale molecules claiming "I am Nicolas" or lacking Law 2/3
         this.molecules = [
           ...idMols,
-          ...this.molecules.filter((m) => m.docTitle !== idDoc.title),
+          ...this.molecules.filter(
+            (m) =>
+              m.docTitle !== idDoc.title &&
+              !(m.focalText && m.focalText.includes('I am Nicolas, a physical neuromorphic'))
+          ),
         ];
       }
     }
@@ -2714,14 +2724,22 @@ export class WasmMemristorEngine {
     let bestWavePackets: CharWavePacket[] = [];
     let bestEval: ReturnType<WasmMemristorEngine['evaluateTriChamberMolecule']> | null = null;
 
-    const queryTokensUpper = rawQuery
+    // Normalize common phonetic or transposition typos in bare-metal queries
+    const normalizedQueryText = rawQuery
+      .replace(/\bcome\s+form\b/gi, 'come from')
+      .replace(/\bphsed\b/gi, 'phased')
+      .replace(/\bfeedfoarwd\b/gi, 'feedforward')
+      .replace(/\bgenrative\b/gi, 'generative')
+      .replace(/\bwhere\s+do\s+you\s+come\s+form\b/gi, 'where do you come from');
+
+    const queryTokensUpper = normalizedQueryText
       .toUpperCase()
       .replace(/['’]S\b/g, '')
       .replace(/[^A-Z0-9\s-]/g, ' ')
       .split(/\s+/)
       .filter((w) => w.length >= 2);
 
-    const normQueryClean = rawQuery.trim().toLowerCase().replace(/[?.!]+$/, '').trim();
+    const normQueryClean = normalizedQueryText.trim().toLowerCase().replace(/[?.!]+$/, '').trim();
     const queryFermions = queryTokensUpper.map((t) => t.toLowerCase());
     const sourcePool =
       hemisphereFilter === 'all'
@@ -2732,10 +2750,14 @@ export class WasmMemristorEngine {
               : !this.isRightHemisphereMolecule(m)
           );
 
+    // Detect agent self-referential inquiry (identity, architecture, origin, improvement, Law 1/2/3)
+    const isSelfReferentialAgentQuery =
+      /\b(?:who\s+are\s+you|what\s+are\s+you|your\s+name|where\s+(?:do\s+you\s+come|are\s+you)\s+from|improve\s+you|make\s+you\s+smarter|how\s+(?:could|can)\s+we\s+(?:improve|make)\s+you|what\s+else\s+should\s+we\s+do|improve|brother|laws?|law\s+[123]|alice|nicolas|smarter)\b/i.test(normalizedQueryText);
+
     // Fast Chemical-Potential (\mu) & Multi-Word Cluster Pre-Filter when crossbar holds thousands of full-book molecules
     let candidateMolecules = sourcePool;
     if (sourcePool.length > 420) {
-      const qWords = rawQuery
+      const qWords = normalizedQueryText
         .toLowerCase()
         .replace(/['’]s\b/g, '')
         .replace(/[^a-z0-9\s-]/g, ' ')
@@ -2790,8 +2812,8 @@ export class WasmMemristorEngine {
         }
 
         // Strict Biparticle Coincidence Gate:
-        // If query has 2+ distinct content fermions (e.g. "Albert" + "Einstein"),
-        // reject false-coincidence collisions where only 1 particle hits and the rest are absent
+        // If query has 2+ distinct content fermions, reject false-coincidence collisions
+        // where only 1 particle hits and the rest are absent (e.g. single word "improve" matching unrelated ecology text)
         let fermionsMatchedInDoc = 0;
         for (const cf of contentFermions) {
           const inMolecule = m.lowerWords.includes(cf.word);
@@ -2801,13 +2823,27 @@ export class WasmMemristorEngine {
           }
         }
         if (contentFermions.length >= 2 && fermionsMatchedInDoc === 1 && matchedWordsCount <= 1) {
-          preScore *= 0.15; // False Coincidence Penalty
-        } else if (contentFermions.length >= 2 && fermionsMatchedInDoc >= contentFermions.length) {
-          preScore *= 2.4; // Multi-fermion Coherent Coincidence Boost
+          preScore *= 0.05; // Strict False Coincidence Penalty
+        } else if (contentFermions.length >= 2 && fermionsMatchedInDoc >= 2) {
+          preScore *= 2.6 * Math.min(3.0, fermionsMatchedInDoc); // Multi-fermion Coherent Coincidence Boost
         }
 
-        // Non-linear multi-particle cluster synergy so sentences matching multiple content words
-        // (e.g. "Time" + "Machine" + "made") dominate over single-word matches across 50,000 sentences
+        // Self-Referential / Agent Identity Coupling:
+        // If user asks about the agent's identity, origin, or improvement, route to Right Hemisphere dialogue crystals
+        const isIdentityDoc =
+          m.docTitle.includes('Instruction-Tuned Conversational Dialogue') ||
+          m.docTitle === 'Live Plastic Crystal Memory' ||
+          m.docTitle.startsWith('Right Hemisphere:');
+
+        if (isSelfReferentialAgentQuery) {
+          if (isIdentityDoc && preScore > 0) {
+            preScore += 9500;
+          } else if (!isIdentityDoc) {
+            preScore *= 0.08; // Suppress unrelated external book/Q&A molecules from hijacking agent queries
+          }
+        }
+
+        // Non-linear multi-particle cluster synergy so sentences matching multiple content words dominate
         if (matchedWordsCount > 1) {
           preScore *= 1.0 + matchedWordsCount * 0.85;
         }
@@ -3177,7 +3213,7 @@ export class WasmMemristorEngine {
           );
         if (qCleanLower.length >= 4 && directCausalHit) {
           const causalBoost = isRightMol
-            ? Math.pow(qCleanLower.length, 1.45) * 44.0
+            ? Math.pow(qCleanLower.length, 1.45) * 95.0 + 18000.0
             : Math.pow(qCleanLower.length, 1.25) * 14.0;
           totalSentenceEnergyMv += causalBoost;
           if (packets.length === 0) {
@@ -3847,7 +3883,7 @@ export class WasmMemristorEngine {
     // 1. If evidence is already 1st/2nd-person relational dialogue (e.g. Right Hemisphere Alice / conversational responses),
     // preserve its authentic conversational voice and strip narrative book clutter.
     const cleanLeadingQuotes = rawClean.replace(/^["'“‘]+/, '').trim();
-    const isFirstPersonDialogue = /^(?:i am|i'm|my name|i live|i resonate|hello|hi|welcome|certainly|indeed|of course)\b/i.test(cleanLeadingQuotes);
+    const isFirstPersonDialogue = /^(?:i am|i'm|my name|i live|i resonate|hello|hi|welcome|certainly|indeed|of course|thank you|to advance|i originate|good\s+(?:morning|evening|night|day)|nice to meet you|as an emergent)\b/i.test(cleanLeadingQuotes);
     if (isFirstPersonDialogue) {
       let stripped = cleanLeadingQuotes.replace(/["'”’]+$/g, '').trim();
       // Clean archaic narrative attributions like: ", so please your Majesty," said Alice very politely; but she added, to herself, "Why, they're only a pack of cards, after all."
@@ -4029,12 +4065,19 @@ export class WasmMemristorEngine {
       return false;
     };
 
-    const isExplicitTeachStatement = /^(?:teach|learn|remember|note|my name is|i am|your name is)\b/i.test(trimmedInput);
+    const isConversationalGreetingOrPleasantry = (text: string): boolean => {
+      const lower = text.toLowerCase().trim();
+      return /^(?:hello|hi|hey|greetings|good\s+(?:morning|afternoon|evening|night|day)|nice\s+to\s+meet\s+you|pleased\s+to\s+meet\s+you|thank\s+you|thanks|you're\s+welcome|welcome|farewell|goodbye|bye|your\s+name\s+is\s+so\s+beautiful|how\s+are\s+you)\b/i.test(lower) ||
+        /\b(?:nice\s+to\s+meet\s+you|pleased\s+to\s+meet\s+you|good\s+night|good\s+morning|your\s+name\s+is\s+so\s+beautiful)\b/i.test(lower);
+    };
+
+    const isExplicitTeachStatement = /^(?:teach|learn|remember|note|store\s+memory|memorize)\b/i.test(trimmedInput);
 
     const isDeclarativeTeachingWave =
       this.plasticQueryLearningEnabled &&
       trimmedInput.length >= 3 &&
       !isImperativeOrPrompt(trimmedInput) &&
+      !isConversationalGreetingOrPleasantry(trimmedInput) &&
       (isExplicitTeachStatement || (questions.length === 0 && !hasMixedDeclarativeAndQuestion));
 
     let freshlyEtchedMol: CrossbarNarrativeMolecule | null = null;
@@ -4696,11 +4739,12 @@ export class WasmMemristorEngine {
     // Assemble the autoregressively generated token stream
     const autoregressiveStream = this.detokenize(generatedTokens);
 
-    // Frontal Lobe combines the physical token stream with bicameral semantic arbitration
+    // Frontal Lobe grounded bicameral semantic arbitration is the authoritative output.
+    // The autoregressiveStream provides the token-by-token oscilloscope telemetry across macro-somas.
     const candidateResponse =
-      autoregressiveStream.length >= 6
-        ? autoregressiveStream
-        : frontalDecision.final_output;
+      frontalDecision.final_output && frontalDecision.final_output.trim().length > 0
+        ? frontalDecision.final_output
+        : (autoregressiveStream.length >= 6 ? autoregressiveStream : 'Resonance pattern completed.');
 
     // Apply Frontal Lobe Bicameral Conversational Verbalizer Pass (Option A - Zero LLM)
     const verbalizedFinal = this.verbalizeGroundedProposition(
